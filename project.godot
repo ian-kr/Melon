@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="melon"
+run/main_scene="res://scenes/levels/level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
