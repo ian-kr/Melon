@@ -20,4 +20,4 @@ func _process(delta):
 		direction = 1
 	pos.x += (SPEED*direction)
 	position = pos
-	pass
+	pass 
