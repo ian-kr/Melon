@@ -31,7 +31,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("3_2xk2g")
 
 [node name="Wheat" type="Sprite2D" parent="."]
-position = Vector2(923, 398)
+position = Vector2(872, 437)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_p4se6")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
