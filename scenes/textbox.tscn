@@ -59,8 +59,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_jjhhl")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+rotation = 0.0225779
 theme_override_fonts/font = ExtResource("1_3cdpx")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 37
 theme_override_styles/normal = SubResource("StyleBoxFlat_cdk15")
 text = "*"
 label_settings = SubResource("LabelSettings_5ic7m")
@@ -70,6 +71,9 @@ uppercase = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+rotation = -0.00524459
+text = "Text
+"
 
 [node name="End" type="Label" parent="MarginContainer/MarginContainer/Panel"]
 layout_mode = 0
