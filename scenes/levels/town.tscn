@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dbmdc1phxivb8"]
+[gd_scene load_steps=2 format=3 uid="uid://bns23pxa10n86"]
+
+[ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
 
 [node name="Town" type="Node2D"]
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_vuune")
+volume_db = -21.55
+autoplay = true
