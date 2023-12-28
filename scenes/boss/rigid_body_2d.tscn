@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://btrh8wggqqb45"]
+
+[ext_resource type="Texture2D" uid="uid://b2x5gpogfnqgm" path="res://graphics/d99f152-cc25100d-bfa2-44d1-ad2d-706df6e92120.png" id="1_8db35"]
+
+[node name="Boss" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(568, 360)
+scale = Vector2(0.17933, 0.141985)
+texture = ExtResource("1_8db35")
