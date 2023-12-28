@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bns23pxa10n86"]
+[gd_scene load_steps=3 format=3 uid="uid://bns23pxa10n86"]
 
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
+[ext_resource type="Texture2D" uid="uid://cp2vyyp6kkmys" path="res://graphics/backgrounds/New Piskel.png" id="2_24lnd"]
 
 [node name="Town" type="Node2D"]
 
@@ -8,3 +9,7 @@
 stream = ExtResource("1_vuune")
 volume_db = -21.55
 autoplay = true
+
+[node name="NewPiskel" type="Sprite2D" parent="."]
+position = Vector2(582, 318)
+texture = ExtResource("2_24lnd")
