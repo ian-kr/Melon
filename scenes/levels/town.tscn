@@ -1,8 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbmdc1phxivb8"]
-
-[ext_resource type="Script" path="res://scenes/Player.gd" id="1_lgmqt"]
+[gd_scene format=3 uid="uid://dbmdc1phxivb8"]
 
 [node name="Town" type="Node2D"]
-
-[node name="Player" type="Sprite2D" parent="."]
-script = ExtResource("1_lgmqt")
