@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctxwf7qgc0173"]
+[gd_scene load_steps=6 format=3 uid="uid://ctxwf7qgc0173"]
 
 [ext_resource type="FontFile" uid="uid://dg20ghqja372h" path="res://graphics/Fonts/Born2bSportyV2.ttf" id="1_3cdpx"]
 
@@ -15,11 +15,6 @@ border_width_bottom = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjhhl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdk15"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="LabelSettings" id="LabelSettings_5ic7m"]
 
 [node name="Textbox" type="CanvasLayer"]
 metadata/_edit_vertical_guides_ = [-84.0]
@@ -57,28 +52,32 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_jjhhl")
 
 [node name="Start" type="Label" parent="MarginContainer/MarginContainer/Panel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-rotation = 0.0225779
+offset_left = -5.0
+offset_top = 39.0
+offset_right = 16.0
+offset_bottom = 92.0
 theme_override_fonts/font = ExtResource("1_3cdpx")
-theme_override_font_sizes/font_size = 37
-theme_override_styles/normal = SubResource("StyleBoxFlat_cdk15")
+theme_override_font_sizes/font_size = 38
 text = "*"
-label_settings = SubResource("LabelSettings_5ic7m")
-uppercase = true
-
-[node name="Text" type="Label" parent="MarginContainer/MarginContainer/Panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-rotation = -0.00524459
-text = "Text
-"
 
 [node name="End" type="Label" parent="MarginContainer/MarginContainer/Panel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-rotation = -0.0372718
+offset_left = 981.0
+offset_top = 51.0
+offset_right = 1005.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("1_3cdpx")
+theme_override_font_sizes/font_size = 22
 text = "V"
-horizontal_alignment = 2
+
+[node name="Speech" type="Label" parent="MarginContainer/MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 48.0
+offset_right = 178.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("1_3cdpx")
+theme_override_font_sizes/font_size = 0
+text = "Text
+"
+uppercase = true
