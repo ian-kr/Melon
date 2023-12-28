@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://w5r14n3b5q1d" path="res://graphics/amishSpriteSheet.png" id="2_51d23"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvv8v"]
-size = Vector2(14, 33)
+size = Vector2(45, 65.75)
 
 [sub_resource type="Animation" id="Animation_c3rhk"]
 length = 0.001
@@ -168,11 +168,12 @@ _data = {
 script = ExtResource("1_71yju")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(419, 338)
+position = Vector2(557, 383)
 shape = SubResource("RectangleShape2D_kvv8v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(574, 366)
+position = Vector2(560.5, 384)
+scale = Vector2(1.84375, 2.125)
 texture = ExtResource("2_51d23")
 hframes = 20
 
