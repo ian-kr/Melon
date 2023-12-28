@@ -9,4 +9,4 @@ To do:
 * Make game map
 * Draw final boss
 * Code boss fight
-* Add better storyline - Darren will compile the whole story into one text file based off the discord whiteboard
+
