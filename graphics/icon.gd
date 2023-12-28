@@ -10,6 +10,7 @@ var pos: Vector2 = Vector2.ZERO # we do not want to change the icons variables d
 func _ready():
 	pos = Vector2(300,300)
 	position = pos
+	
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,7 +18,7 @@ func _process(delta):
 	if pos.x  >= 900:
 		direction = -1
 	if pos.x <= 0:
-		direction = 1
+		direction = 29
 	pos.x += (SPEED*direction)
 	position = pos
 	pass 
