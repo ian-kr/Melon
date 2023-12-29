@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://fmdurogvopc"]
+[gd_scene load_steps=3 format=3 uid="uid://dj8a7nr6o3ptm"]
 
 [ext_resource type="Texture2D" uid="uid://kfu0a4il1ky1" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
 [ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="2_bfoqi"]
 
 [node name="InsideBarn" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_bfoqi")]
+position = Vector2(-317, -115)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+position = Vector2(288, 181)
+remote_path = NodePath("../../Camera2D")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -11,7 +18,8 @@
 motion_mirroring = Vector2(133, 131)
 
 [node name="DarkWood" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(133, 131)
+position = Vector2(675, 144)
 texture = ExtResource("1_oheuv")
 
-[node name="Player" parent="." instance=ExtResource("2_bfoqi")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-29, 66)
