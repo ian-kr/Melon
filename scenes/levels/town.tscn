@@ -45,7 +45,7 @@ position = Vector2(558.541, 289.606)
 scale = Vector2(0.979897, 0.859365)
 
 [node name="Wheat" type="Sprite2D" parent="."]
-position = Vector2(2012, 355)
+position = Vector2(1999, 342)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_p4se6")
 
