@@ -3,10 +3,7 @@ Game created for the Melon Game Jam 2023
 
 
 To do:
-* Make the background music
-* Make the boss music
-* Make the sound effects
+* Make puzzles to collect charms
 * Make game map
 * Draw final boss
 * Code boss fight
-
