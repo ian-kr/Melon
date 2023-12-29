@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://yp8aotqjugy3"]
+[gd_scene load_steps=3 format=3 uid="uid://dbvct84o2tykg"]
+
+[ext_resource type="Script" path="res://scenes/levels/coward_ending.gd" id="1_scdfr"]
+[ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="2_ymak1"]
 
 [node name="Coward_Ending" type="Node2D"]
+script = ExtResource("1_scdfr")
+
+[node name="TextBox" parent="." instance=ExtResource("2_ymak1")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
