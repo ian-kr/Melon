@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bns23pxa10n86"]
+[gd_scene load_steps=27 format=3 uid="uid://bns23pxa10n86"]
 
 [ext_resource type="Script" path="res://scenes/levels/town.gd" id="1_nnyt8"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
@@ -13,6 +13,10 @@
 [ext_resource type="Script" path="res://scenes/levels/LeaveArea.gd" id="10_eswwj"]
 [ext_resource type="Script" path="res://scenes/levels/Barn Area.gd" id="10_g07nf"]
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="13_5o8hg"]
+[ext_resource type="Script" path="res://scenes/levels/talkToGrandma.gd" id="14_2dexs"]
+[ext_resource type="Texture2D" uid="uid://2advl77hb5vu" path="res://graphics/assets/things/fence.png" id="14_8umxh"]
+[ext_resource type="Texture2D" uid="uid://difgvs4lu720a" path="res://graphics/assets/things/hay.png" id="14_673j7"]
+[ext_resource type="Texture2D" uid="uid://4ef7h73rfl6w" path="res://graphics/assets/things/fenceEnd.png" id="16_i0j8d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
 size = Vector2(3654.88, 63.5)
@@ -37,6 +41,9 @@ radius = 120.801
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i8lus"]
 radius = 85.9593
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pmjon"]
+radius = 35.0143
 
 [node name="Town" type="Node2D"]
 script = ExtResource("1_nnyt8")
@@ -236,6 +243,9 @@ shape = SubResource("RectangleShape2D_dgdpw")
 position = Vector2(3642, 653.75)
 shape = SubResource("RectangleShape2D_cp0nr")
 
+[node name="Wheat_farmBorder" type="CollisionPolygon2D" parent="collision"]
+polygon = PackedVector2Array(1745, 212, 2284, 290, 2240, 387, 1696, 297, 1690, 340, 2242, 431, 2329, 261, 1756, 162)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1, -1)
 
@@ -285,7 +295,80 @@ position = Vector2(1192, -40)
 scale = Vector2(3.83251, 2.61011)
 texture = ExtResource("6_o7l0b")
 
+[node name="GrandmaEster" type="Area2D" parent="."]
+position = Vector2(157, 430)
+script = ExtResource("14_2dexs")
+
+[node name="StandinForGrandmaEster" type="Sprite2D" parent="GrandmaEster"]
+position = Vector2(1, -7)
+texture = ExtResource("14_673j7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrandmaEster"]
+position = Vector2(1, -7)
+shape = SubResource("CircleShape2D_pmjon")
+
+[node name="Fences" type="Node2D" parent="."]
+
+[node name="Fence" type="Sprite2D" parent="Fences"]
+z_index = 3
+texture_repeat = 2
+position = Vector2(1983, 366)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("14_8umxh")
+region_enabled = true
+region_rect = Rect2(0, 0, 2048, 256)
+
+[node name="FenceEnd" type="Sprite2D" parent="Fences"]
+z_index = 3
+position = Vector2(2243, 407)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_i0j8d")
+
+[node name="Fence2" type="Sprite2D" parent="Fences"]
+texture_repeat = 2
+position = Vector2(2276, 347)
+rotation = -1.15541
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("14_8umxh")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 256)
+
+[node name="Fence3" type="Sprite2D" parent="Fences"]
+z_index = 3
+texture_repeat = 2
+position = Vector2(2037, 231)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("14_8umxh")
+region_enabled = true
+region_rect = Rect2(0, 0, 2048, 256)
+
+[node name="FenceEnd2" type="Sprite2D" parent="Fences"]
+position = Vector2(2305, 274)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_i0j8d")
+
+[node name="FenceEnd3" type="Sprite2D" parent="Fences"]
+z_index = 3
+position = Vector2(1700, 321)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_i0j8d")
+flip_h = true
+
+[node name="FenceEnd4" type="Sprite2D" parent="Fences"]
+position = Vector2(1759, 186)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_i0j8d")
+flip_h = true
+
 [connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="LeaveArea" to="LeaveArea" method="_on_body_shape_exited"]
 [connection signal="body_entered" from="Barn Area" to="Barn Area" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="Barn Area" to="Barn Area" method="_on_body_shape_exited"]
+[connection signal="body_entered" from="GrandmaEster" to="GrandmaEster" method="_on_body_entered"]
+[connection signal="body_shape_exited" from="GrandmaEster" to="GrandmaEster" method="_on_body_shape_exited"]
