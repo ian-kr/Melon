@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED: float = 1002.0
+@export var SPEED: float = 150.0
 
 var input_direction : Vector2 = Vector2.ZERO
 var facing = "down"
