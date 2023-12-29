@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h0lc727llesk"
-path="res://.godot/imported/CharmMichael.png-cf70f4cd4bea70a0e5580812de6c9081.ctex"
+uid="uid://c51bagefjsidj"
+path="res://.godot/imported/Golden Cow Idle.png-baccdc3480112f65f63c11e2e7fa1c29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/assets/charms/CharmMichael.png"
-dest_files=["res://.godot/imported/CharmMichael.png-cf70f4cd4bea70a0e5580812de6c9081.ctex"]
+source_file="res://graphics/assets/things/Golden Cow Idle.png"
+dest_files=["res://.godot/imported/Golden Cow Idle.png-baccdc3480112f65f63c11e2e7fa1c29.ctex"]
 
 [params]
 

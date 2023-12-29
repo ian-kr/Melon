@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfyk33eotyve8"
-path="res://.godot/imported/CharmRaphael.png-ec950ba4c632d85e9b62ac79c63b3925.ctex"
+path="res://.godot/imported/CharmRaphael.png-80bc93e984114829f89baed2cd1721ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/assets/CharmRaphael.png"
-dest_files=["res://.godot/imported/CharmRaphael.png-ec950ba4c632d85e9b62ac79c63b3925.ctex"]
+source_file="res://graphics/assets/charms/CharmRaphael.png"
+dest_files=["res://.godot/imported/CharmRaphael.png-80bc93e984114829f89baed2cd1721ce.ctex"]
 
 [params]
 

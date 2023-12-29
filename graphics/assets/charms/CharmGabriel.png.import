@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu8oy8so7wvdx"
-path="res://.godot/imported/CharmGabriel.png-49df0704ecefced16268d5f0645925fc.ctex"
+path="res://.godot/imported/CharmGabriel.png-84b09561790dd34af8d8980eda7ca645.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/assets/CharmGabriel.png"
-dest_files=["res://.godot/imported/CharmGabriel.png-49df0704ecefced16268d5f0645925fc.ctex"]
+source_file="res://graphics/assets/charms/CharmGabriel.png"
+dest_files=["res://.godot/imported/CharmGabriel.png-84b09561790dd34af8d8980eda7ca645.ctex"]
 
 [params]
 
