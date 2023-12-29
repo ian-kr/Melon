@@ -3,7 +3,8 @@ extends CharacterBody2D
 @export var SPEED: float = 1002.0
 
 var input_direction : Vector2 = Vector2.ZERO
-var facing = "up"
+var facing = "down"
+
 func _ready():
 	$AnimationPlayer.play("walk_right")
 func get_input():

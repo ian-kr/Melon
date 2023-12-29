@@ -11,6 +11,7 @@ extends CanvasLayer
 const readRate = 0.1
 var line = 0
 var textqueue = []
+
 enum state {
 	READY,
 	READING,
@@ -20,10 +21,6 @@ var currentState = state.READY
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hideTextbox() # Replace with function body.
-	queue("First text")
-	queue("Second text")
-	queue("Third text")
-	queue("Forth text")
 	#for thing in text:
 		#if 
 		#addText(thing)

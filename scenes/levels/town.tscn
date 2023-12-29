@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bns23pxa10n86"]
+[gd_scene load_steps=19 format=3 uid="uid://bns23pxa10n86"]
 
 [ext_resource type="Script" path="res://scenes/levels/town.gd" id="1_nnyt8"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cwldi1vc7tqlt" path="res://graphics/assets/things/House1.png" id="9_o6io6"]
 [ext_resource type="Script" path="res://scenes/levels/LeaveArea.gd" id="10_eswwj"]
 [ext_resource type="Script" path="res://scenes/levels/Barn Area.gd" id="10_g07nf"]
+[ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="13_5o8hg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
 size = Vector2(1031, 85)
@@ -170,6 +171,8 @@ shape = SubResource("CircleShape2D_i8lus")
 position = Vector2(2102, 98)
 scale = Vector2(0.761719, 0.765625)
 texture = ExtResource("3_2xk2g")
+
+[node name="TextBox" parent="." instance=ExtResource("13_5o8hg")]
 
 [connection signal="area_shape_entered" from="LeaveArea" to="." method="_on_leave_area_area_shape_entered"]
 [connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
