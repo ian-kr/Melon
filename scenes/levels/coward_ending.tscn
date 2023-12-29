@@ -1,9 +1,105 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbvct84o2tykg"]
+[gd_scene load_steps=17 format=3 uid="uid://dbvct84o2tykg"]
 
 [ext_resource type="Script" path="res://scenes/levels/coward_ending.gd" id="1_scdfr"]
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="2_ymak1"]
+[ext_resource type="Texture2D" uid="uid://dseihpify4nac" path="res://graphics/assets/things/grassTile.png" id="3_yjnhm"]
+[ext_resource type="Texture2D" uid="uid://d03vgecdpnjk1" path="res://graphics/playerSprites/sprite_00.png" id="4_kka0a"]
+[ext_resource type="Texture2D" uid="uid://617o0h50nt8" path="res://graphics/playerSprites/sprite_01.png" id="5_bu58j"]
+[ext_resource type="Texture2D" uid="uid://dkxd2g6sc7t42" path="res://graphics/playerSprites/sprite_02.png" id="6_yg352"]
+[ext_resource type="Texture2D" uid="uid://blfd6y60vc3qc" path="res://graphics/playerSprites/sprite_03.png" id="7_qm8xu"]
+[ext_resource type="Texture2D" uid="uid://difgvs4lu720a" path="res://graphics/assets/things/hay.png" id="8_xvpyl"]
+[ext_resource type="Texture2D" uid="uid://qc2m2ssk4sv8" path="res://graphics/playerSprites/sprite_12.png" id="8_xx8o0"]
+[ext_resource type="Texture2D" uid="uid://cb4n8g8hgosw3" path="res://graphics/playerSprites/sprite_13.png" id="9_3tfll"]
+[ext_resource type="Texture2D" uid="uid://lu7dwkxkjrln" path="res://graphics/assets/things/wheatStack.png" id="9_tvie8"]
+[ext_resource type="Texture2D" uid="uid://c4kuyyhtretsn" path="res://graphics/playerSprites/sprite_14.png" id="10_lpxnb"]
+[ext_resource type="Texture2D" uid="uid://187po0rcndqu" path="res://graphics/playerSprites/sprite_15.png" id="11_tyd6c"]
+[ext_resource type="Texture2D" uid="uid://dt4p2wspgs78e" path="res://graphics/assets/things/House1.png" id="14_hjv6h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jgskx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kka0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bu58j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yg352")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qm8xu")
+}],
+"loop": true,
+"name": &"Walking Forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xx8o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3tfll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lpxnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tyd6c")
+}],
+"loop": true,
+"name": &"Walking Left",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgfqk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xvpyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tvie8")
+}],
+"loop": true,
+"name": &"Walk Right",
+"speed": 5.0
+}]
 
 [node name="Coward_Ending" type="Node2D"]
 script = ExtResource("1_scdfr")
 
 [node name="TextBox" parent="." instance=ExtResource("2_ymak1")]
+
+[node name="GrassTile" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(-1092, 281)
+texture = ExtResource("3_yjnhm")
+region_enabled = true
+region_rect = Rect2(0, 0, 5000, 1000)
+
+[node name="plr" type="AnimatedSprite2D" parent="."]
+position = Vector2(660, 318)
+scale = Vector2(1.844, 1.844)
+sprite_frames = SubResource("SpriteFrames_jgskx")
+animation = &"Walking Forward"
+frame_progress = 0.763976
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="plr"]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="plr"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(660, 318)
+scale = Vector2(1.844, 1.844)
+
+[node name="Other traveler" type="AnimatedSprite2D" parent="."]
+position = Vector2(589, 321)
+sprite_frames = SubResource("SpriteFrames_bgfqk")
+animation = &"Walk Right"
+
+[node name="House1" type="Sprite2D" parent="."]
+position = Vector2(-3000, 103)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("14_hjv6h")

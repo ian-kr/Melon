@@ -42,7 +42,7 @@ region_rect = Rect2(0, 0, 3000, 2000)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tl7uj")
 format = 2
-layer_0/tile_data = PackedInt32Array(262147, 0, 0, 196614, 0, 0, 393222, 0, 0)
+layer_0/tile_data = PackedInt32Array(262147, 0, 0, 196614, 0, 0, 393222, 0, 0, 327693, 0, 0)
 
 [node name="Boss" parent="." instance=ExtResource("4_6uvb2")]
 position = Vector2(269, -137)

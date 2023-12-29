@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://oeeu0tx5jfoh"]
+[gd_scene load_steps=6 format=3 uid="uid://oeeu0tx5jfoh"]
 
 [ext_resource type="FontFile" uid="uid://dg20ghqja372h" path="res://graphics/Fonts/Born2bSportyV2.ttf" id="1_r4gtf"]
 [ext_resource type="Script" path="res://scenes/TextScript/textboxScript.gd" id="1_uvkcc"]
@@ -10,11 +10,22 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cta8t"]
+bg_color = Color(0.239216, 0.239216, 0.239216, 0.686275)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w733b"]
+font_size = 30
+font_color = Color(0.788235, 0.788235, 0.788235, 1)
+
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_uvkcc")
 
 [node name="TextPanel" type="Panel" parent="."]
-visible = false
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -61,5 +72,25 @@ text = "V"
 [node name="Timer" type="Timer" parent="TextPanel"]
 process_callback = 0
 one_shot = true
+
+[node name="End Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 147.0
+offset_top = 51.0
+offset_right = 990.0
+offset_bottom = 242.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cta8t")
+
+[node name="Label" type="Label" parent="End Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 842.0
+offset_bottom = 189.0
+text = "THE END
+
+Ending:"
+label_settings = SubResource("LabelSettings_w733b")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="TextPanel/Timer" to="." method="_on_timer_timeout"]

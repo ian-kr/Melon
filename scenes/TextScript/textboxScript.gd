@@ -20,6 +20,7 @@ enum state {
 var currentState = state.READY
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$"End Panel".hide()
 	hideTextbox() #Hides the box at the start of game
 
 func queue(text): #Queues up the next piece of text
@@ -60,7 +61,15 @@ func addText():
 	var text = textqueue.pop_front()
 	if (text == "pause"): #Skips a pause
 		return
-	
+	if (text == "end"):
+		#play ending screen
+		$"End Panel".show()
+		tween = create_tween()
+		tween.tween_property($"End Panel","modulate",Color(1,1,1,1),5)
+		tween = create_tween()
+		tween.tween_property($"End Panel"/Label,"modulate",Color(1,1,1,1),5)
+		
+		return
 	textBox.visible_ratio = 0.0
 	textBox.text = text
 	changeState(state.READING)
