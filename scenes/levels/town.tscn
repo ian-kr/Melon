@@ -155,7 +155,7 @@ position = Vector2(30, 4)
 script = ExtResource("10_eswwj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeaveArea"]
-position = Vector2(23, 1249)
+position = Vector2(1, 1297)
 shape = SubResource("CircleShape2D_2qxbk")
 
 [node name="Barn Area" type="Area2D" parent="."]
