@@ -50,12 +50,12 @@ position = Vector2(2024, 365)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_p4se6")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="bg" type="ParallaxBackground" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="bg"]
 motion_mirroring = Vector2(1150, 650)
 
-[node name="GrassTile" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="GrassTile" type="Sprite2D" parent="bg/ParallaxLayer"]
 texture_repeat = 2
 position = Vector2(575, 325)
 texture = ExtResource("2_vjt7g")
