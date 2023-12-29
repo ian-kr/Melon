@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bns23pxa10n86"]
+[gd_scene load_steps=13 format=3 uid="uid://bns23pxa10n86"]
 
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
 [ext_resource type="Texture2D" uid="uid://dbgcgn5mseu7l" path="res://graphics/assets/things/grassTile.png" id="2_vjt7g"]
@@ -8,9 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://cvaguulccngdr" path="res://graphics/assets/things/Tree1.png" id="6_o7l0b"]
 [ext_resource type="Texture2D" uid="uid://cbcg8m2tir20u" path="res://graphics/assets/things/Tree2.png" id="7_mgkwl"]
 [ext_resource type="Texture2D" uid="uid://tegslj7v83hy" path="res://graphics/assets/things/Tree3.png" id="8_p8f42"]
+[ext_resource type="Texture2D" uid="uid://cwldi1vc7tqlt" path="res://graphics/assets/things/House1.png" id="9_o6io6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
 size = Vector2(1031, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aidf5"]
+size = Vector2(143, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3f2g"]
+size = Vector2(149, 140)
 
 [node name="Town" type="Node2D"]
 
@@ -21,13 +28,15 @@ autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("3_exm27")]
 z_index = 10
+scale = Vector2(0.979897, 0.859365)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2(570, 337)
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(570, 337)
+position = Vector2(558.541, 289.606)
+scale = Vector2(0.979897, 0.859365)
 
 [node name="Barn" type="Sprite2D" parent="."]
 position = Vector2(959, 256)
@@ -111,6 +120,27 @@ texture = ExtResource("8_p8f42")
 
 [node name="collision" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="collision"]
+[node name="Treeline" type="CollisionShape2D" parent="collision"]
 position = Vector2(562.5, 43.5)
 shape = SubResource("RectangleShape2D_xsw73")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="House1" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(374, 277)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_o6io6")
+
+[node name="House2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(134, 286)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_o6io6")
+flip_h = true
+
+[node name="House3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(138, 293)
+shape = SubResource("RectangleShape2D_aidf5")
+
+[node name="House4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(369, 286)
+shape = SubResource("RectangleShape2D_m3f2g")
