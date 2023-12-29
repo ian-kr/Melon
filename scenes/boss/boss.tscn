@@ -1,19 +1,134 @@
-[gd_scene load_steps=4 format=3 uid="uid://dot2svp28huva"]
+[gd_scene load_steps=11 format=3 uid="uid://dot2svp28huva"]
 
 [ext_resource type="Script" path="res://Boss.gd" id="1_avfjf"]
-[ext_resource type="Texture2D" uid="uid://b2x5gpogfnqgm" path="res://graphics/d99f152-cc25100d-bfa2-44d1-ad2d-706df6e92120.png" id="2_llpve"]
+[ext_resource type="Texture2D" uid="uid://c2qovvg5xdcc" path="res://graphics/assets/things/daCow.png" id="2_51yde"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5u61"]
-size = Vector2(208, 279)
+[sub_resource type="Animation" id="Animation_od0dn"]
+resource_name = "Cow_Idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_tkebv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1b3au"]
+resource_name = "cow_walking"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_5si7f"]
+resource_name = "Cow_Walking"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_21w8f"]
+resource_name = "GoldenCow_Idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15, 16]
+}
+
+[sub_resource type="Animation" id="Animation_wsaoc"]
+resource_name = "GoldenCow_Walking"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [19, 20]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ugr1l"]
+_data = {
+"Cow_Idle": SubResource("Animation_od0dn"),
+"Cow_Walking": SubResource("Animation_5si7f"),
+"GoldenCow_Idle": SubResource("Animation_21w8f"),
+"GoldenCow_Walking": SubResource("Animation_wsaoc"),
+"RESET": SubResource("Animation_tkebv"),
+"cow_walking": SubResource("Animation_1b3au")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ctou7"]
+radius = 45.0111
 
 [node name="Boss" type="CharacterBody2D"]
 script = ExtResource("1_avfjf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(593, 312)
-scale = Vector2(0.180893, 0.177544)
-texture = ExtResource("2_llpve")
+position = Vector2(580, 260)
+scale = Vector2(0.830729, 0.839844)
+texture = ExtResource("2_51yde")
+hframes = 6
+vframes = 4
+
+[node name="Cow_Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ugr1l")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(591, 313)
-shape = SubResource("RectangleShape2D_v5u61")
+position = Vector2(608, 252)
+shape = SubResource("CircleShape2D_ctou7")

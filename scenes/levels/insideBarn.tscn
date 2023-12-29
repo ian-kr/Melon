@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://fmdurogvopc"]
+[gd_scene load_steps=7 format=3 uid="uid://fmdurogvopc"]
 
-[ext_resource type="Texture2D" uid="uid://c354jegu3dsrb" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
-[ext_resource type="Texture2D" uid="uid://difgvs4lu720a" path="res://graphics/assets/things/hay.png" id="2_4t0nn"]
+[ext_resource type="Texture2D" uid="uid://kfu0a4il1ky1" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
+[ext_resource type="Texture2D" uid="uid://dpqe4vpwfph71" path="res://graphics/assets/things/hay.png" id="2_4t0nn"]
 [ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="2_bfoqi"]
+[ext_resource type="PackedScene" uid="uid://dot2svp28huva" path="res://scenes/boss/boss.tscn" id="4_6uvb2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
 texture = ExtResource("2_4t0nn")
@@ -42,3 +43,6 @@ region_rect = Rect2(0, 0, 3000, 2000)
 tile_set = SubResource("TileSet_tl7uj")
 format = 2
 layer_0/tile_data = PackedInt32Array(262147, 0, 0, 196614, 0, 0, 393222, 0, 0)
+
+[node name="Boss" parent="." instance=ExtResource("4_6uvb2")]
+position = Vector2(269, -137)

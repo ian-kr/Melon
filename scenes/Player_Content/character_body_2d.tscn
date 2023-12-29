@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bfekkk7kqve4c"]
+[gd_scene load_steps=15 format=3 uid="uid://bfekkk7kqve4c"]
 
 [ext_resource type="Script" path="res://scenes/Player_Content/character_body_2d.gd" id="1_71yju"]
 [ext_resource type="Texture2D" uid="uid://w5r14n3b5q1d" path="res://graphics/amishSpriteSheet.png" id="2_51d23"]
@@ -151,6 +151,21 @@ tracks/0/keys = {
 "values": [5, 6, 4, 7]
 }
 
+[sub_resource type="Animation" id="Animation_rmjb7"]
+resource_name = "test"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sp58q"]
 _data = {
 "RESET": SubResource("Animation_c3rhk"),
@@ -158,6 +173,7 @@ _data = {
 "idle_left": SubResource("Animation_exxct"),
 "idle_right": SubResource("Animation_187hy"),
 "idle_up": SubResource("Animation_luykq"),
+"test": SubResource("Animation_rmjb7"),
 "walk_down": SubResource("Animation_qrqk0"),
 "walk_left": SubResource("Animation_52tjq"),
 "walk_right": SubResource("Animation_xlkb0"),
