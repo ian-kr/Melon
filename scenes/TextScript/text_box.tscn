@@ -14,6 +14,7 @@ border_width_bottom = 5
 script = ExtResource("1_uvkcc")
 
 [node name="TextPanel" type="Panel" parent="."]
+visible = false
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0

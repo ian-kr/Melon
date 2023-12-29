@@ -32,11 +32,11 @@ motion_mirroring = Vector2(1150, 650)
 
 [node name="DarkWood" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture_repeat = 2
-position = Vector2(570, 330)
+position = Vector2(752, 500)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_oheuv")
 region_enabled = true
-region_rect = Rect2(0, 0, 1150, 650)
-metadata/_edit_lock_ = true
+region_rect = Rect2(0, 0, 3000, 2000)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tl7uj")
