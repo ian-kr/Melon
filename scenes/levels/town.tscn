@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bns23pxa10n86"]
+[gd_scene load_steps=15 format=3 uid="uid://bns23pxa10n86"]
 
+[ext_resource type="Script" path="res://scenes/levels/town.gd" id="1_nnyt8"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
 [ext_resource type="Texture2D" uid="uid://dbgcgn5mseu7l" path="res://graphics/assets/things/grassTile.png" id="2_vjt7g"]
 [ext_resource type="Texture2D" uid="uid://dpqf3oox2wg46" path="res://graphics/assets/things/Barn.png" id="3_2xk2g"]
@@ -19,7 +20,11 @@ size = Vector2(143, 148)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3f2g"]
 size = Vector2(149, 140)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq7lr"]
+size = Vector2(254, 158)
+
 [node name="Town" type="Node2D"]
+script = ExtResource("1_nnyt8")
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_vuune")
@@ -44,7 +49,7 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_2xk2g")
 
 [node name="Wheat" type="Sprite2D" parent="."]
-position = Vector2(2006, 365)
+position = Vector2(2024, 365)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_p4se6")
 
@@ -144,3 +149,7 @@ shape = SubResource("RectangleShape2D_aidf5")
 [node name="House4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(369, 286)
 shape = SubResource("RectangleShape2D_m3f2g")
+
+[node name="Barn_col" type="CollisionShape2D" parent="."]
+position = Vector2(2091, 106)
+shape = SubResource("RectangleShape2D_wq7lr")
