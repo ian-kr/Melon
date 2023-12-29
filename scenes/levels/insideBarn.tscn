@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://fmdurogvopc"]
+
+[ext_resource type="Texture2D" uid="uid://kfu0a4il1ky1" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
+[ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="2_bfoqi"]
+
+[node name="InsideBarn" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(133, 131)
+
+[node name="DarkWood" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(133, 131)
+texture = ExtResource("1_oheuv")
+
+[node name="Player" parent="." instance=ExtResource("2_bfoqi")]
