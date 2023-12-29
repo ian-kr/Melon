@@ -1,49 +1,51 @@
 extends CanvasLayer
 
-
+#Setup references
 @onready var textPanel = $TextPanel
 @onready var startTag = $TextPanel/Start
 @onready var endTag = $TextPanel/End
 @onready var textBox = $TextPanel/Text
-@onready var timer = $TextPanel/Timer
 @onready var tween = create_tween()
 
+#Set up variables
 const readRate = 0.1
-var line = 0
 var textqueue = []
 
 enum state {
 	READY,
 	READING,
+	PAUSE,
 	FINISHED
 }
 var currentState = state.READY
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	hideTextbox() # Replace with function body.
-	#for thing in text:
-		#if 
-		#addText(thing)
+	hideTextbox() #Hides the box at the start of game
 
-func queue(text):
+func queue(text): #Queues up the next piece of text
 	textqueue.push_back(text)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	match currentState:
+	match currentState: #Checks current state
 		state.READY:
-			if !textqueue.is_empty():
+			#Ready state
+			if !textqueue.is_empty(): #If the queue is not empty, add the next text
 				addText()
 		state.READING:
-			if (Input.is_action_just_pressed("ui_accept")):
-				timer.stop()
+			#Text box is Reading state
+			if (Input.is_action_just_pressed("ui_accept")): #Can skip the animation of text
 				textBox.visible_ratio = 1
 				endTag.text = "V"
 				tween.stop()
 				changeState(state.FINISHED)
 		state.FINISHED:
-			if (Input.is_action_just_pressed("ui_accept")):
+			#Text box is finished Reading
+			if (Input.is_action_just_pressed("ui_accept")): #Sets up next text by hiding the textbox
 				changeState(state.READY)
 				hideTextbox()
+				
+
 func hideTextbox():
 	textPanel.hide()
 	startTag.text = ""
@@ -53,17 +55,18 @@ func hideTextbox():
 func showTextBox():
 	textPanel.show()
 	startTag.text = "*"
-	
+
 func addText():
 	var text = textqueue.pop_front()
+	if (text == "pause"): #Skips a pause
+		return
 	
 	textBox.visible_ratio = 0.0
 	textBox.text = text
 	changeState(state.READING)
 	showTextBox()
-	tween = create_tween()
-	tween.tween_property(textBox,"visible_ratio",1.0,len(text) * readRate)
-	timer.start(len(text) * readRate)
+	tween = create_tween() #Creates a NEW tween
+	tween.tween_property(textBox,"visible_ratio",1.0,len(text) * readRate) #Plays the tween
 	
 	
 	
@@ -74,6 +77,3 @@ func changeState(newstate):
 func _on_timer_timeout():
 	changeState(state.FINISHED)
 	endTag.text = "V"
-	
-	
-	pass # Replace with function body.
