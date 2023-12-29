@@ -39,12 +39,12 @@ position = Vector2(558.541, 289.606)
 scale = Vector2(0.979897, 0.859365)
 
 [node name="Barn" type="Sprite2D" parent="."]
-position = Vector2(959, 256)
+position = Vector2(2105, 112)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_2xk2g")
 
 [node name="Wheat" type="Sprite2D" parent="."]
-position = Vector2(872, 437)
+position = Vector2(2006, 365)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_p4se6")
 
