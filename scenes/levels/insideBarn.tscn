@@ -9,7 +9,7 @@
 position = Vector2(-317, -115)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-position = Vector2(288, 181)
+position = Vector2(567, 361)
 remote_path = NodePath("../../Camera2D")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -18,8 +18,8 @@ remote_path = NodePath("../../Camera2D")
 motion_mirroring = Vector2(133, 131)
 
 [node name="DarkWood" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(675, 144)
+position = Vector2(829, 112)
 texture = ExtResource("1_oheuv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-29, 66)
+position = Vector2(250, 246)
