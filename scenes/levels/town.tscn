@@ -259,11 +259,10 @@ position = Vector2(369, 286)
 shape = SubResource("RectangleShape2D_m3f2g")
 
 [node name="LeaveArea" type="Area2D" parent="."]
-position = Vector2(30, 4)
+position = Vector2(1, 1294)
 script = ExtResource("10_eswwj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeaveArea"]
-position = Vector2(1, 1297)
 shape = SubResource("CircleShape2D_2qxbk")
 
 [node name="Barn Area" type="Area2D" parent="."]
@@ -286,7 +285,7 @@ position = Vector2(1192, -40)
 scale = Vector2(3.83251, 2.61011)
 texture = ExtResource("6_o7l0b")
 
-[connection signal="area_shape_entered" from="LeaveArea" to="." method="_on_leave_area_area_shape_entered"]
 [connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
+[connection signal="body_shape_exited" from="LeaveArea" to="LeaveArea" method="_on_body_shape_exited"]
 [connection signal="body_entered" from="Barn Area" to="Barn Area" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="Barn Area" to="Barn Area" method="_on_body_shape_exited"]
