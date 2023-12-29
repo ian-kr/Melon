@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bns23pxa10n86"]
+[gd_scene load_steps=15 format=3 uid="uid://bns23pxa10n86"]
 
 [ext_resource type="Script" path="res://scenes/levels/town.gd" id="1_nnyt8"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
@@ -20,6 +20,9 @@ size = Vector2(143, 148)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3f2g"]
 size = Vector2(149, 140)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esk7a"]
+size = Vector2(290, 172.5)
+
 [node name="Town" type="Node2D"]
 script = ExtResource("1_nnyt8")
 
@@ -40,13 +43,8 @@ remote_path = NodePath("../../Camera2D")
 position = Vector2(558.541, 289.606)
 scale = Vector2(0.979897, 0.859365)
 
-[node name="Barn" type="Sprite2D" parent="."]
-position = Vector2(2099, 100)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_2xk2g")
-
 [node name="Wheat" type="Sprite2D" parent="."]
-position = Vector2(2024, 365)
+position = Vector2(2012, 355)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_p4se6")
 
@@ -146,3 +144,15 @@ shape = SubResource("RectangleShape2D_aidf5")
 [node name="House4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(369, 286)
 shape = SubResource("RectangleShape2D_m3f2g")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(8, 0)
+
+[node name="Barn" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(2094, 98)
+scale = Vector2(0.761719, 0.765625)
+texture = ExtResource("3_2xk2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(2091, 98.75)
+shape = SubResource("RectangleShape2D_esk7a")
