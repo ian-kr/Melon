@@ -1,25 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://dj8a7nr6o3ptm"]
+[gd_scene load_steps=6 format=3 uid="uid://fmdurogvopc"]
 
 [ext_resource type="Texture2D" uid="uid://kfu0a4il1ky1" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
+[ext_resource type="Texture2D" uid="uid://dpqe4vpwfph71" path="res://graphics/assets/things/hay.png" id="2_4t0nn"]
 [ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="2_bfoqi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
+texture = ExtResource("2_4t0nn")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tl7uj"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_u1qj2")
 
 [node name="InsideBarn" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_bfoqi")]
-position = Vector2(-317, -115)
+position = Vector2(6, -39)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2(567, 361)
 remote_path = NodePath("../../Camera2D")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(573, 322)
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(133, 131)
+motion_mirroring = Vector2(1150, 650)
 
 [node name="DarkWood" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(829, 112)
+texture_repeat = 2
+position = Vector2(570, 330)
 texture = ExtResource("1_oheuv")
+region_enabled = true
+region_rect = Rect2(0, 0, 1150, 650)
+metadata/_edit_lock_ = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(250, 246)
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_tl7uj")
+format = 2
+layer_0/tile_data = PackedInt32Array(262147, 0, 0, 196614, 0, 0, 393222, 0, 0)
