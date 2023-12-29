@@ -33,7 +33,7 @@ script = ExtResource("1_nnyt8")
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_vuune")
-volume_db = -21.55
+volume_db = -31.856
 autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("3_exm27")]
