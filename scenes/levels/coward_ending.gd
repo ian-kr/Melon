@@ -38,9 +38,12 @@ func _ready():
 	moveSprite(plr,Vector2(-3000,318),20)
 	moveSprite(other, Vector2(-3050,318),20)
 	plr.play("Walking Left")
+	other.play("Walk Left")
 	await get_tree().create_timer(20.0).timeout
 	plr.play("Walking Forward")
 	plr.stop()
+	other.play("IdleLeft")
+	other.stop()
 
 func moveSprite(sprite,pos,time):
 	currentAnimation.append(sprite)
@@ -52,10 +55,11 @@ func on_tween_finished():
 	currentAnimation.pop_front().stop()
 	
 func otherTraveler():
-	other.play()
+	other.play("Walk Right")
 	moveSprite(other,Vector2(589,305),3)
 	await get_tree().create_timer(3.0).timeout
-
+	other.play("IdleRight")
+	other.stop()
 
 func pause():
 	#Waits until the pause is empty

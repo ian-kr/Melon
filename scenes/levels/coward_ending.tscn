@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dbvct84o2tykg"]
+[gd_scene load_steps=24 format=3 uid="uid://dbvct84o2tykg"]
 
 [ext_resource type="Script" path="res://scenes/levels/coward_ending.gd" id="1_scdfr"]
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="2_ymak1"]
@@ -7,13 +7,20 @@
 [ext_resource type="Texture2D" uid="uid://617o0h50nt8" path="res://graphics/playerSprites/sprite_01.png" id="5_bu58j"]
 [ext_resource type="Texture2D" uid="uid://dkxd2g6sc7t42" path="res://graphics/playerSprites/sprite_02.png" id="6_yg352"]
 [ext_resource type="Texture2D" uid="uid://blfd6y60vc3qc" path="res://graphics/playerSprites/sprite_03.png" id="7_qm8xu"]
-[ext_resource type="Texture2D" uid="uid://difgvs4lu720a" path="res://graphics/assets/things/hay.png" id="8_xvpyl"]
 [ext_resource type="Texture2D" uid="uid://qc2m2ssk4sv8" path="res://graphics/playerSprites/sprite_12.png" id="8_xx8o0"]
 [ext_resource type="Texture2D" uid="uid://cb4n8g8hgosw3" path="res://graphics/playerSprites/sprite_13.png" id="9_3tfll"]
-[ext_resource type="Texture2D" uid="uid://lu7dwkxkjrln" path="res://graphics/assets/things/wheatStack.png" id="9_tvie8"]
 [ext_resource type="Texture2D" uid="uid://c4kuyyhtretsn" path="res://graphics/playerSprites/sprite_14.png" id="10_lpxnb"]
 [ext_resource type="Texture2D" uid="uid://187po0rcndqu" path="res://graphics/playerSprites/sprite_15.png" id="11_tyd6c"]
+[ext_resource type="Texture2D" uid="uid://bknxeuh0st7f1" path="res://graphics/MormonSprite/MormomIdleLeft.png" id="12_g0sit"]
+[ext_resource type="Texture2D" uid="uid://blme3bbhoiwu1" path="res://graphics/MormonSprite/MormomIdleRight.png" id="13_oju3j"]
 [ext_resource type="Texture2D" uid="uid://dt4p2wspgs78e" path="res://graphics/assets/things/House1.png" id="14_hjv6h"]
+[ext_resource type="Texture2D" uid="uid://cmxbxb0yl5lvc" path="res://graphics/MormonSprite/MormomLeft1.png" id="14_ouq1o"]
+[ext_resource type="Texture2D" uid="uid://dg0y4828oiqbf" path="res://graphics/MormonSprite/MormomLeft2.png" id="15_gocjv"]
+[ext_resource type="Texture2D" uid="uid://ujjjtoks4xms" path="res://graphics/MormonSprite/MormomLeft3.png" id="16_1d3lv"]
+[ext_resource type="Texture2D" uid="uid://ccics8sjhx834" path="res://graphics/MormonSprite/MormomRight1.png" id="17_nug31"]
+[ext_resource type="Texture2D" uid="uid://cx1kekdnvon48" path="res://graphics/MormonSprite/MormomRight2.png" id="18_q5p5j"]
+[ext_resource type="Texture2D" uid="uid://ds6p1b3piw762" path="res://graphics/MormonSprite/MormomRight3.png" id="19_22vyy"]
+[ext_resource type="Texture2D" uid="uid://k3yr681kik8c" path="res://graphics/MormonSprite/MormomRight4.png" id="20_aq2sf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jgskx"]
 animations = [{
@@ -56,10 +63,46 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_xvpyl")
+"texture": ExtResource("12_g0sit")
+}],
+"loop": true,
+"name": &"IdleLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_oju3j")
+}],
+"loop": true,
+"name": &"IdleRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ouq1o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_tvie8")
+"texture": ExtResource("15_gocjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1d3lv")
+}],
+"loop": true,
+"name": &"Walk Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_nug31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q5p5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_22vyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_aq2sf")
 }],
 "loop": true,
 "name": &"Walk Right",
@@ -96,8 +139,9 @@ scale = Vector2(1.844, 1.844)
 
 [node name="Other traveler" type="AnimatedSprite2D" parent="."]
 position = Vector2(589, 321)
+scale = Vector2(1.844, 1.844)
 sprite_frames = SubResource("SpriteFrames_bgfqk")
-animation = &"Walk Right"
+animation = &"IdleRight"
 
 [node name="House1" type="Sprite2D" parent="."]
 position = Vector2(-3000, 103)
