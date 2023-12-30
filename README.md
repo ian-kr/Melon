@@ -12,3 +12,4 @@ Fix Bugs:
 * Cow clipping
 * Moon walking
 * Grandma closing your game
+* Sorta a bug but fix the maps being separate
