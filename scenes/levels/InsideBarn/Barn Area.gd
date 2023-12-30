@@ -3,7 +3,8 @@ extends Area2D
 var entered = false
 
 func _on_body_entered(body):
-	entered = true
+	if body.name == "Player":
+		entered = true
 
 func _on_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
 	entered = false

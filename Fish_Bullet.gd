@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var velo = Vector2(1,0)
-var speed : int = 300
+var speed : int = 600
 @onready var plr = get_node("/root/InsideBarn/Player")
 
 func _physics_process(delta):
