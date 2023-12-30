@@ -1,8 +1,8 @@
 [gd_scene load_steps=20 format=3 uid="uid://fmdurogvopc"]
 
 [ext_resource type="Script" path="res://scenes/levels/InsideBarn/insideBarn.gd" id="1_fpo5d"]
-[ext_resource type="Texture2D" uid="uid://c354jegu3dsrb" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
-[ext_resource type="Texture2D" uid="uid://difgvs4lu720a" path="res://graphics/assets/things/hay.png" id="2_4t0nn"]
+[ext_resource type="Texture2D" uid="uid://kfu0a4il1ky1" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
+[ext_resource type="Texture2D" uid="uid://dpqe4vpwfph71" path="res://graphics/assets/things/hay.png" id="2_4t0nn"]
 [ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="2_bfoqi"]
 [ext_resource type="PackedScene" uid="uid://dot2svp28huva" path="res://scenes/boss/boss.tscn" id="4_6uvb2"]
 [ext_resource type="Script" path="res://scenes/levels/InsideBarn/Door.gd" id="5_fpuwx"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cvp0lfnxsyhc8" path="res://talismans.tscn" id="9_vo8pb"]
 [ext_resource type="AudioStream" uid="uid://cigwewwqx6s6s" path="res://music/BattleMusic.mp3" id="10_6kqc1"]
 [ext_resource type="PackedScene" uid="uid://dd11oyrynv0dr" path="res://fish_bullet.tscn" id="11_qrjyx"]
-[ext_resource type="Texture2D" uid="uid://c27yyhi2b0acb" path="res://graphics/assets/things/barnWall.png" id="12_xphsc"]
+[ext_resource type="Texture2D" uid="uid://bfdixnyyqwgit" path="res://graphics/assets/things/barnWall.png" id="12_xphsc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
 texture = ExtResource("2_4t0nn")

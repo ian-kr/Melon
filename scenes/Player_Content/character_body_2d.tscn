@@ -201,7 +201,6 @@ radius = 28.3196
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_71yju")
-SPEED = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(575.5, 345)

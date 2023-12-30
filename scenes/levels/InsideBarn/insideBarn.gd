@@ -43,7 +43,9 @@ func Fish_Attack():
 	$ezkiel.shoot()
 	
 func Sword_Attack():
-	pass
+	get_node("Player/SwingArea/CollisionShape2D").Disable = false
+	await get_tree().create_timer(1.0).timeout
+	get_node("Player/SwingArea/CollisionShape2D").Disable = true
 	
 func Flower_Heal():
 	$ezkiel.health = ($ezekiel.health + 20) % 100

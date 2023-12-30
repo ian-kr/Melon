@@ -117,7 +117,6 @@ autoplay = true
 [node name="Player" parent="." instance=ExtResource("3_exm27")]
 z_index = 10
 scale = Vector2(0.979897, 0.859365)
-SPEED = null
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2(570, 337)

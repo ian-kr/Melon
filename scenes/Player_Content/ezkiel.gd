@@ -50,4 +50,6 @@ func swing():
 
 
 func _on_swing_area_area_entered(area):
-	pass # Replace with function body.
+	area.name == "hitbox"
+	get_node("/root/InsideBarn/Boss").health -= 30
+	print (get_node("/root/InsideBarn/Boss").health)
