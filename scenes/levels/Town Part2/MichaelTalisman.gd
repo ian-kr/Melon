@@ -4,8 +4,11 @@ var collected = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-	self.show()
-	get_node("/root/TownP2/CharmMichael").hide()
+	if (Talisman.talismans.find("Michael") != -1):
+		self.hide()
+	else:
+		self.show()
+		get_node("/root/TownP2/CharmMichael").hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

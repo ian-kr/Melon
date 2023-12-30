@@ -1,20 +1,20 @@
-[gd_scene load_steps=36 format=3 uid="uid://bns23pxa10n86"]
+[gd_scene load_steps=40 format=3 uid="uid://bns23pxa10n86"]
 
 [ext_resource type="Script" path="res://scenes/levels/Intro/town.gd" id="1_nnyt8"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
-[ext_resource type="Texture2D" uid="uid://dbgcgn5mseu7l" path="res://graphics/assets/things/grassTile.png" id="2_vjt7g"]
-[ext_resource type="Texture2D" uid="uid://dpqf3oox2wg46" path="res://graphics/assets/things/Barn.png" id="3_2xk2g"]
+[ext_resource type="Texture2D" uid="uid://dseihpify4nac" path="res://graphics/assets/things/grassTile.png" id="2_vjt7g"]
+[ext_resource type="Texture2D" uid="uid://wyewc62g6l3i" path="res://graphics/assets/things/Barn.png" id="3_2xk2g"]
 [ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="3_exm27"]
-[ext_resource type="Texture2D" uid="uid://byw7158oxnu8e" path="res://graphics/assets/things/wheat.png" id="4_p4se6"]
-[ext_resource type="Texture2D" uid="uid://cvaguulccngdr" path="res://graphics/assets/things/Tree1.png" id="6_o7l0b"]
-[ext_resource type="Texture2D" uid="uid://cbcg8m2tir20u" path="res://graphics/assets/things/Tree2.png" id="7_mgkwl"]
-[ext_resource type="Texture2D" uid="uid://tegslj7v83hy" path="res://graphics/assets/things/Tree3.png" id="8_p8f42"]
-[ext_resource type="Texture2D" uid="uid://cwldi1vc7tqlt" path="res://graphics/assets/things/House1.png" id="9_o6io6"]
+[ext_resource type="Texture2D" uid="uid://dho8yq5ojw7x8" path="res://graphics/assets/things/wheat.png" id="4_p4se6"]
+[ext_resource type="Texture2D" uid="uid://3wvncfplcq52" path="res://graphics/assets/things/Tree1.png" id="6_o7l0b"]
+[ext_resource type="Texture2D" uid="uid://drhfhscsiecai" path="res://graphics/assets/things/Tree2.png" id="7_mgkwl"]
+[ext_resource type="Texture2D" uid="uid://d1n0ypadehs2d" path="res://graphics/assets/things/Tree3.png" id="8_p8f42"]
+[ext_resource type="Texture2D" uid="uid://dt4p2wspgs78e" path="res://graphics/assets/things/House1.png" id="9_o6io6"]
 [ext_resource type="Script" path="res://scenes/levels/Coward Ending/LeaveArea.gd" id="10_eswwj"]
 [ext_resource type="Script" path="res://scenes/levels/InsideBarn/Barn Area.gd" id="10_g07nf"]
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="13_5o8hg"]
 [ext_resource type="Script" path="res://scenes/levels/Intro/talkToGrandma.gd" id="14_2dexs"]
-[ext_resource type="Texture2D" uid="uid://cmug54cm8h81f" path="res://graphics/assets/things/fence.png" id="14_8umxh"]
+[ext_resource type="Texture2D" uid="uid://2advl77hb5vu" path="res://graphics/assets/things/fence.png" id="14_8umxh"]
 [ext_resource type="Texture2D" uid="uid://bbp3nocoofl4u" path="res://graphics/GrandmaEster/sprite_12-1.png.png" id="15_5x8ob"]
 [ext_resource type="Texture2D" uid="uid://2ofqvohrpy8v" path="res://graphics/GrandmaEster/sprite_12-2.png.png" id="16_g6k6a"]
 [ext_resource type="Texture2D" uid="uid://4ef7h73rfl6w" path="res://graphics/assets/things/fenceEnd.png" id="16_i0j8d"]
@@ -25,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://cn1hctsnaqy4m" path="res://graphics/GrandmaEster/Right3.png" id="21_j3hod"]
 [ext_resource type="Texture2D" uid="uid://bp45bu5qabeh2" path="res://graphics/GrandmaEster/Right4.png" id="22_8ltlb"]
 [ext_resource type="Script" path="res://scenes/levels/Intro/Wheat.gd" id="24_kujta"]
+[ext_resource type="Texture2D" uid="uid://2k8dwqxhpcdd" path="res://graphics/assets/things/pond/Pond-1.png.png" id="26_f4c57"]
+[ext_resource type="Texture2D" uid="uid://cy51lwh4mjs31" path="res://graphics/assets/things/pond/Pond-2.png.png" id="27_8tt0n"]
+[ext_resource type="Script" path="res://scenes/levels/Intro/pond.gd" id="28_xb6m4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
 size = Vector2(2641.88, 63.5)
@@ -88,6 +91,20 @@ animations = [{
 "loop": true,
 "name": &"right",
 "speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48uq8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_f4c57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8tt0n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
 }]
 
 [node name="Town" type="Node2D"]
@@ -553,6 +570,13 @@ texture = ExtResource("4_p4se6")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheat2"]
 position = Vector2(15, 7)
 polygon = PackedVector2Array(-193, -79, 302, -13, 236, 119, -248, 35)
+
+[node name="pond" type="AnimatedSprite2D" parent="."]
+position = Vector2(1194, 1015)
+sprite_frames = SubResource("SpriteFrames_48uq8")
+script = ExtResource("28_xb6m4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="pond"]
 
 [connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="LeaveArea" to="LeaveArea" method="_on_body_shape_exited"]
