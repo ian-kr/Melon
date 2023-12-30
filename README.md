@@ -4,11 +4,9 @@ Game created for the Melon Game Jam 2023
 
 To do:
 * Make puzzles to collect charms
-* Make game map (including barn)
 * Code boss fight
-* Make Title Screen
-
+  
 Fix Bugs:
+* Fix Barn Collisions
 * Cow clipping
 * Moon walking
-* Grandma closing your game
