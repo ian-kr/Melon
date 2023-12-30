@@ -16,7 +16,7 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
-	if(Input.is_action_just_pressed("ui_accept")):
+	if(Input.is_action_just_pressed("fish")):
 		shoot()
 	# Animation
 	if velocity != Vector2.ZERO:  # Check if the player is moving

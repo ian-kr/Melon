@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://fmdurogvopc"]
 
 [ext_resource type="Script" path="res://scenes/levels/InsideBarn/insideBarn.gd" id="1_fpo5d"]
-[ext_resource type="Texture2D" uid="uid://c354jegu3dsrb" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
-[ext_resource type="Texture2D" uid="uid://difgvs4lu720a" path="res://graphics/assets/things/hay.png" id="2_4t0nn"]
+[ext_resource type="Texture2D" uid="uid://kfu0a4il1ky1" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
+[ext_resource type="Texture2D" uid="uid://dpqe4vpwfph71" path="res://graphics/assets/things/hay.png" id="2_4t0nn"]
 [ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="2_bfoqi"]
 [ext_resource type="PackedScene" uid="uid://dot2svp28huva" path="res://scenes/boss/boss.tscn" id="4_6uvb2"]
 [ext_resource type="Script" path="res://scenes/levels/InsideBarn/Door.gd" id="5_fpuwx"]
@@ -85,6 +85,7 @@ polygon = PackedVector2Array(-9, 200, -91, 201, -147, 256, -147, 345, -88, 403, 
 
 [node name="Fish_Bullet" parent="." instance=ExtResource("11_qrjyx")]
 position = Vector2(308, -64)
+script = null
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="Door" to="Door" method="_on_body_shape_exited"]
