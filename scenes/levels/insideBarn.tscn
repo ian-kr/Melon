@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://fmdurogvopc"]
+[gd_scene load_steps=13 format=3 uid="uid://fmdurogvopc"]
 
+[ext_resource type="Script" path="res://scenes/levels/insideBarn.gd" id="1_fpo5d"]
 [ext_resource type="Texture2D" uid="uid://c354jegu3dsrb" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
 [ext_resource type="Texture2D" uid="uid://difgvs4lu720a" path="res://graphics/assets/things/hay.png" id="2_4t0nn"]
 [ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="2_bfoqi"]
 [ext_resource type="PackedScene" uid="uid://dot2svp28huva" path="res://scenes/boss/boss.tscn" id="4_6uvb2"]
 [ext_resource type="Script" path="res://scenes/levels/Door.gd" id="5_fpuwx"]
 [ext_resource type="Texture2D" uid="uid://b3ee63wx64ft6" path="res://graphics/assets/things/door.png" id="6_riyrt"]
+[ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="8_me8oy"]
+[ext_resource type="PackedScene" uid="uid://cvp0lfnxsyhc8" path="res://talismans.tscn" id="9_vo8pb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
 texture = ExtResource("2_4t0nn")
@@ -20,6 +23,7 @@ sources/0 = SubResource("TileSetAtlasSource_u1qj2")
 size = Vector2(28, 205)
 
 [node name="InsideBarn" type="Node2D"]
+script = ExtResource("1_fpo5d")
 
 [node name="Player" parent="." instance=ExtResource("2_bfoqi")]
 position = Vector2(6, -39)
@@ -68,6 +72,10 @@ shape = SubResource("RectangleShape2D_78wl1")
 
 [node name="Door" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(-9, 200, -91, 201, -147, 256, -147, 345, -88, 403, -10, 404)
+
+[node name="Textbox" parent="." instance=ExtResource("8_me8oy")]
+
+[node name="Talismans" parent="." instance=ExtResource("9_vo8pb")]
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="Door" to="Door" method="_on_body_shape_exited"]

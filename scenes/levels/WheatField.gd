@@ -22,6 +22,8 @@ func _process(delta):
 				$CharmGabriel.show()
 				get_node("/root/TownP2/TextBox").queue("Found it.")
 				var timer = get_tree().create_timer(3.0)
+				if (Talisman.talismans.find("Gabriel") == -1):
+					Talisman.talismans.append("Gabriel")
 				while (timer.time_left != 0):
 					$CharmGabriel.position = Vector2(get_node("/root/TownP2/Camera2D").position) + Vector2(-5,-50)
 					await get_tree().create_timer(0.1).timeout

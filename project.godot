@@ -14,6 +14,10 @@ config/name="melon"
 run/main_scene="res://scenes/levels/town.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
+[autoload]
+
+Talisman="*res://talisman.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"

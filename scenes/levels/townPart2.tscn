@@ -291,7 +291,7 @@ position = Vector2(3642, 653.75)
 shape = SubResource("RectangleShape2D_cp0nr")
 
 [node name="Wheat_farmBorder" type="CollisionPolygon2D" parent="collision"]
-polygon = PackedVector2Array(1745, 212, 2284, 290, 2240, 387, 1696, 297, 1690, 340, 2242, 431, 2329, 261, 1756, 162)
+polygon = PackedVector2Array(1745, 212, 2284, 290, 2240, 387, 1705, 298, 1690, 340, 2242, 431, 2329, 261, 1756, 162)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1, -1)
@@ -415,7 +415,8 @@ flip_h = true
 script = ExtResource("24_t1k5b")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WheatField"]
-polygon = PackedVector2Array(1750, 211, 2289, 288, 2228, 423, 1677, 326)
+position = Vector2(-3, 3)
+polygon = PackedVector2Array(1767, 208, 2289, 288, 2228, 423, 1727, 308)
 
 [node name="Wheat" type="Sprite2D" parent="WheatField"]
 position = Vector2(1999, 342)
