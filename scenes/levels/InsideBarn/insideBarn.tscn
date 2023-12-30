@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://fmdurogvopc"]
+[gd_scene load_steps=20 format=3 uid="uid://fmdurogvopc"]
 
 [ext_resource type="Script" path="res://scenes/levels/InsideBarn/insideBarn.gd" id="1_fpo5d"]
 [ext_resource type="Texture2D" uid="uid://kfu0a4il1ky1" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cvp0lfnxsyhc8" path="res://talismans.tscn" id="9_vo8pb"]
 [ext_resource type="AudioStream" uid="uid://cigwewwqx6s6s" path="res://music/BattleMusic.mp3" id="10_6kqc1"]
 [ext_resource type="PackedScene" uid="uid://dd11oyrynv0dr" path="res://fish_bullet.tscn" id="11_qrjyx"]
+[ext_resource type="Texture2D" uid="uid://bfdixnyyqwgit" path="res://graphics/assets/things/barnWall.png" id="12_xphsc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
 texture = ExtResource("2_4t0nn")
@@ -23,6 +24,18 @@ sources/0 = SubResource("TileSetAtlasSource_u1qj2")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_78wl1"]
 size = Vector2(28, 205)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_druqx"]
+size = Vector2(1801, 63.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhobu"]
+size = Vector2(17, 1301)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxmxw"]
+size = Vector2(1809, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8wiw"]
+size = Vector2(22, 1374.5)
 
 [node name="InsideBarn" type="Node2D"]
 script = ExtResource("1_fpo5d")
@@ -48,8 +61,8 @@ motion_mirroring = Vector2(1150, 650)
 
 [node name="DarkWood" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture_repeat = 2
-position = Vector2(752, 500)
-scale = Vector2(0.5, 0.5)
+position = Vector2(879.5, 286)
+scale = Vector2(0.616333, 0.676)
 texture = ExtResource("1_oheuv")
 region_enabled = true
 region_rect = Rect2(0, 0, 3000, 2000)
@@ -57,7 +70,7 @@ region_rect = Rect2(0, 0, 3000, 2000)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tl7uj")
 format = 2
-layer_0/tile_data = PackedInt32Array(262147, 0, 0, 196614, 0, 0, 393222, 0, 0, 327693, 0, 0)
+layer_0/tile_data = PackedInt32Array(262147, 0, 0, 196614, 0, 0, 327693, 0, 0, 524300, 0, 0, 589844, 0, 0, 65556, 0, 0, -262128, 0, 0, -262137, 0, 0, -131069, 0, 0, -131048, 0, 0, 720922, 0, 0, 786447, 0, 0, 655367, 0, 0)
 
 [node name="Boss" parent="." instance=ExtResource("4_6uvb2")]
 position = Vector2(269, -137)
@@ -67,6 +80,7 @@ position = Vector2(-15, 286)
 script = ExtResource("5_fpuwx")
 
 [node name="Door" type="Sprite2D" parent="Door"]
+position = Vector2(28, 0)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("6_riyrt")
 
@@ -77,7 +91,26 @@ shape = SubResource("RectangleShape2D_78wl1")
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="Door" type="CollisionPolygon2D" parent="Collisions"]
-polygon = PackedVector2Array(-9, 200, -91, 201, -147, 256, -147, 345, -88, 403, -10, 404)
+position = Vector2(30, -3)
+polygon = PackedVector2Array(12, 198, -91, 201, -147, 256, -147, 345, -88, 403, 14, 403)
+
+[node name="collision" type="StaticBody2D" parent="Collisions"]
+
+[node name="North_Border" type="CollisionShape2D" parent="Collisions/collision"]
+position = Vector2(868.5, -377)
+shape = SubResource("RectangleShape2D_druqx")
+
+[node name="West_Border" type="CollisionShape2D" parent="Collisions/collision"]
+position = Vector2(19, 301)
+shape = SubResource("RectangleShape2D_mhobu")
+
+[node name="South_Border" type="CollisionShape2D" parent="Collisions/collision"]
+position = Vector2(857.5, 940)
+shape = SubResource("RectangleShape2D_pxmxw")
+
+[node name="East_Border" type="CollisionShape2D" parent="Collisions/collision"]
+position = Vector2(1762, 290)
+shape = SubResource("RectangleShape2D_d8wiw")
 
 [node name="Textbox" parent="." instance=ExtResource("8_me8oy")]
 
@@ -86,6 +119,37 @@ polygon = PackedVector2Array(-9, 200, -91, 201, -147, 256, -147, 345, -88, 403, 
 [node name="Fish_Bullet" parent="." instance=ExtResource("11_qrjyx")]
 position = Vector2(308, -64)
 script = null
+
+[node name="Barn Walls" type="Node2D" parent="."]
+position = Vector2(-41, 682)
+scale = Vector2(0.242188, 2.17187)
+
+[node name="Wall1" type="Sprite2D" parent="Barn Walls"]
+position = Vector2(123.871, 1.3813)
+scale = Vector2(1, 1)
+texture = ExtResource("12_xphsc")
+
+[node name="Wall2" type="Sprite2D" parent="Barn Walls"]
+position = Vector2(156.903, -353.151)
+scale = Vector2(1, 1)
+texture = ExtResource("12_xphsc")
+
+[node name="Wall3" type="Sprite2D" parent="Barn Walls"]
+position = Vector2(3802.84, -494.043)
+rotation = 4.71239
+scale = Vector2(0.113845, 29.5531)
+texture = ExtResource("12_xphsc")
+
+[node name="Wall3" type="Sprite2D" parent="Barn Walls/Wall3"]
+position = Vector2(-5341.32, -2.27028)
+scale = Vector2(1.07753, 0.998639)
+texture = ExtResource("12_xphsc")
+
+[node name="Wall4" type="Sprite2D" parent="Barn Walls"]
+position = Vector2(7509.78, -181.676)
+rotation = -3.14159
+scale = Vector2(0.899412, 2.49384)
+texture = ExtResource("12_xphsc")
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="Door" to="Door" method="_on_body_shape_exited"]
