@@ -506,7 +506,7 @@ shape = SubResource("CircleShape2D_kb404")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pond"]
 position = Vector2(138, -49)
 sprite_frames = SubResource("SpriteFrames_xaehk")
-frame_progress = 0.672228
+frame_progress = 0.605537
 
 [connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="LeaveArea" to="LeaveArea" method="_on_body_shape_exited"]

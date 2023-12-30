@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 
 [autoload]
 
-Talisman="*res://Global Data/talisman.gd"
+Talisman="*res://talisman.gd"
 
 [display]
 
