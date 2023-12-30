@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dd11oyrynv0dr"]
 
 [ext_resource type="Script" path="res://Fish_Bullet.gd" id="1_0gqj2"]
-[ext_resource type="Texture2D" uid="uid://cqikner8k351g" path="res://graphics/assets/things/fishAttack.png" id="2_po87s"]
+[ext_resource type="Texture2D" uid="uid://68bdrbt18m8i" path="res://graphics/assets/things/fishAttack.png" id="2_po87s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i0r4e"]
 size = Vector2(12.5, 18)

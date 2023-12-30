@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://fmdurogvopc"]
+[gd_scene load_steps=15 format=3 uid="uid://fmdurogvopc"]
 
 [ext_resource type="Script" path="res://scenes/levels/InsideBarn/insideBarn.gd" id="1_fpo5d"]
 [ext_resource type="Texture2D" uid="uid://c354jegu3dsrb" path="res://graphics/assets/things/darkWood.png" id="1_oheuv"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="8_me8oy"]
 [ext_resource type="PackedScene" uid="uid://cvp0lfnxsyhc8" path="res://talismans.tscn" id="9_vo8pb"]
 [ext_resource type="AudioStream" uid="uid://cigwewwqx6s6s" path="res://music/BattleMusic.mp3" id="10_6kqc1"]
+[ext_resource type="PackedScene" uid="uid://dd11oyrynv0dr" path="res://fish_bullet.tscn" id="11_qrjyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
 texture = ExtResource("2_4t0nn")
@@ -81,6 +82,9 @@ polygon = PackedVector2Array(-9, 200, -91, 201, -147, 256, -147, 345, -88, 403, 
 [node name="Textbox" parent="." instance=ExtResource("8_me8oy")]
 
 [node name="Talismans" parent="." instance=ExtResource("9_vo8pb")]
+
+[node name="Fish_Bullet" parent="." instance=ExtResource("11_qrjyx")]
+position = Vector2(308, -64)
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="Door" to="Door" method="_on_body_shape_exited"]
