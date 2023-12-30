@@ -14,4 +14,6 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.name.substr(0,4)== "fish":
 		body.queue_free()
-		print("took damage")
+		get_node("/root/InsideBarn/Boss").health -= 5
+		print (get_node("/root/InsideBarn/Boss").health)
+		
