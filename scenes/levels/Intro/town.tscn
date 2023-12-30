@@ -236,15 +236,27 @@ scale = Vector2(4.28802, 3.25654)
 texture = ExtResource("8_p8f42")
 flip_h = true
 
+[node name="Tree31" type="Sprite2D" parent="Trees/Tree24/Tree28"]
+position = Vector2(84.1295, 115.764)
+scale = Vector2(0.554471, 0.913766)
+texture = ExtResource("8_p8f42")
+flip_h = true
+
+[node name="Tree32" type="Sprite2D" parent="Trees/Tree24/Tree28"]
+position = Vector2(174.304, 88.9851)
+scale = Vector2(0.685044, 1.16472)
+texture = ExtResource("8_p8f42")
+flip_h = true
+
+[node name="Tree28" type="Sprite2D" parent="Trees/Tree24/Tree28"]
+position = Vector2(126.581, 88.3198)
+scale = Vector2(1.07969, 1.356)
+texture = ExtResource("8_p8f42")
+flip_h = true
+
 [node name="Tree32" type="Sprite2D" parent="Trees/Tree24"]
 position = Vector2(-873.969, 431.11)
 scale = Vector2(1.4164, 1.98175)
-texture = ExtResource("6_o7l0b")
-flip_h = true
-
-[node name="Tree33" type="Sprite2D" parent="Trees/Tree24"]
-position = Vector2(-883.312, 53.5806)
-scale = Vector2(1.59001, 1.86632)
 texture = ExtResource("6_o7l0b")
 flip_h = true
 
@@ -399,6 +411,47 @@ position = Vector2(2717, 1169)
 scale = Vector2(4.21876, 3.40625)
 texture = ExtResource("7_mgkwl")
 
+[node name="Tree41" type="Sprite2D" parent="Trees"]
+position = Vector2(2553, 1288)
+scale = Vector2(5.47481, 4.24002)
+texture = ExtResource("8_p8f42")
+
+[node name="Tree42" type="Sprite2D" parent="Trees"]
+position = Vector2(-54.0002, 368)
+scale = Vector2(5.2758, 3.44562)
+texture = ExtResource("6_o7l0b")
+flip_h = true
+
+[node name="Tree33" type="Sprite2D" parent="Trees/Tree42"]
+position = Vector2(217.408, 304.445)
+scale = Vector2(1.02495, 1.10825)
+texture = ExtResource("6_o7l0b")
+flip_h = true
+
+[node name="Tree34" type="Sprite2D" parent="Trees/Tree42"]
+position = Vector2(61.9812, 328.823)
+scale = Vector2(1.10126, 1.87193)
+texture = ExtResource("6_o7l0b")
+flip_h = true
+
+[node name="Tree35" type="Sprite2D" parent="Trees/Tree42"]
+position = Vector2(142.348, 292.545)
+scale = Vector2(1.02923, 0.733969)
+texture = ExtResource("6_o7l0b")
+flip_h = true
+
+[node name="Tree36" type="Sprite2D" parent="Trees/Tree42"]
+position = Vector2(464.385, 306.186)
+scale = Vector2(1.17281, 1.35872)
+texture = ExtResource("6_o7l0b")
+flip_h = true
+
+[node name="Tree37" type="Sprite2D" parent="Trees/Tree42"]
+position = Vector2(359.377, 299.22)
+scale = Vector2(-1.26863, 1.35244)
+texture = ExtResource("6_o7l0b")
+flip_h = true
+
 [node name="collision" type="StaticBody2D" parent="."]
 
 [node name="Treeline" type="CollisionShape2D" parent="collision"]
@@ -474,11 +527,11 @@ position = Vector2(1222, 322)
 script = ExtResource("10_g07nf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barn Area"]
-position = Vector2(382, 595)
+position = Vector2(546, 473)
 shape = SubResource("CircleShape2D_i8lus")
 
 [node name="Barn" type="Sprite2D" parent="Barn Area"]
-position = Vector2(428, 547)
+position = Vector2(620, 383)
 scale = Vector2(0.761719, 0.765625)
 texture = ExtResource("3_2xk2g")
 
@@ -572,7 +625,7 @@ position = Vector2(15, 7)
 polygon = PackedVector2Array(-193, -79, 302, -13, 236, 119, -248, 35)
 
 [node name="pond" type="AnimatedSprite2D" parent="."]
-position = Vector2(1194, 1015)
+position = Vector2(1288, 1113)
 sprite_frames = SubResource("SpriteFrames_48uq8")
 script = ExtResource("28_xb6m4")
 
