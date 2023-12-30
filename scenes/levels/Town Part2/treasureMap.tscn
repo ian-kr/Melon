@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://bjlseidl1ac2u"]
+[gd_scene load_steps=2 format=3 uid="uid://b08s3y2mji6bt"]
+
+[ext_resource type="Texture2D" uid="uid://d1eojgofc7xcm" path="res://graphics/assets/things/Map.png" id="1_oj1xa"]
 
 [node name="TreasureMap" type="CanvasLayer"]
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(590, 337)
+scale = Vector2(3, 3)
+texture = ExtResource("1_oj1xa")

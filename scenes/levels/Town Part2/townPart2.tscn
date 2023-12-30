@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://celmyaj67vt2n"]
+[gd_scene load_steps=51 format=3 uid="uid://celmyaj67vt2n"]
 
 [ext_resource type="Script" path="res://scenes/levels/Town Part2/townP2.gd" id="1_8n4jy"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="2_y8nsx"]
@@ -30,9 +30,13 @@
 [ext_resource type="Texture2D" uid="uid://djkscc6lbooj6" path="res://graphics/assets/charms/BrokeCharmMichael-1.png.png" id="28_cirlw"]
 [ext_resource type="Texture2D" uid="uid://c630xwynhn34a" path="res://graphics/assets/charms/BrokeCharmMichael-2.png.png" id="29_e3tjf"]
 [ext_resource type="Texture2D" uid="uid://bpy3lhh6ajxa2" path="res://graphics/assets/charms/BrokeCharmMichael-3.png.png" id="30_4nwnq"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/treasureMap.gd" id="31_ho77s"]
 [ext_resource type="Script" path="res://scenes/levels/Town Part2/pond.gd" id="31_nbvsg"]
 [ext_resource type="Texture2D" uid="uid://2k8dwqxhpcdd" path="res://graphics/assets/things/pond/Pond-1.png.png" id="32_d2av5"]
+[ext_resource type="PackedScene" uid="uid://b08s3y2mji6bt" path="res://scenes/levels/Town Part2/treasureMap.tscn" id="32_wfonw"]
+[ext_resource type="Texture2D" uid="uid://d1eojgofc7xcm" path="res://graphics/assets/things/Map.png" id="33_bjy0i"]
 [ext_resource type="Texture2D" uid="uid://cy51lwh4mjs31" path="res://graphics/assets/things/pond/Pond-2.png.png" id="33_g1uri"]
+[ext_resource type="Texture2D" uid="uid://dfyk33eotyve8" path="res://graphics/assets/charms/CharmRaphael.png" id="34_6myou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
 size = Vector2(3654.88, 63.5)
@@ -490,10 +494,19 @@ polygon = PackedVector2Array(381, 1136, 391, 1135, 392, 1145, 382, 1152, 377, 11
 
 [node name="treasureMap" type="Area2D" parent="."]
 position = Vector2(357, 412)
+script = ExtResource("31_ho77s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treasureMap"]
 position = Vector2(3, -18)
 shape = SubResource("CircleShape2D_tsbkx")
+
+[node name="TreasureMap" parent="treasureMap" instance=ExtResource("32_wfonw")]
+visible = false
+
+[node name="Map" type="Sprite2D" parent="treasureMap"]
+position = Vector2(3, -18)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("33_bjy0i")
 
 [node name="pond" type="Area2D" parent="."]
 position = Vector2(1025, 1146)
@@ -506,7 +519,12 @@ shape = SubResource("CircleShape2D_kb404")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pond"]
 position = Vector2(138, -49)
 sprite_frames = SubResource("SpriteFrames_xaehk")
-frame_progress = 0.672228
+frame_progress = 0.566025
+
+[node name="CharmRaphael" type="Sprite2D" parent="pond"]
+position = Vector2(321, -63)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("34_6myou")
 
 [connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="LeaveArea" to="LeaveArea" method="_on_body_shape_exited"]
@@ -521,3 +539,5 @@ frame_progress = 0.672228
 [connection signal="body_entered" from="MichaelPiece1" to="MichaelPiece1" method="_on_body_entered"]
 [connection signal="body_entered" from="MichaelPiece2" to="MichaelPiece2" method="_on_body_entered"]
 [connection signal="body_entered" from="MichaelPiece3" to="MichaelPiece3" method="_on_body_entered"]
+[connection signal="body_entered" from="treasureMap" to="treasureMap" method="_on_body_entered"]
+[connection signal="body_entered" from="pond" to="pond" method="_on_body_entered"]
