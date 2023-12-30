@@ -3,7 +3,7 @@ extends Node2D
 var battle : bool = false
 var has_fish : bool = false
 var has_sword : bool = false
-var has_flower : bool = false
+var has_flower : bool = true
 
 func _ready():
 	if len(Talisman.talismans) == 0:
@@ -41,11 +41,11 @@ func _process(delta):
 	
 
 func Fish_Attack():
-	pass
+	$ezkiel.shoot()
 	
 func Sword_Attack():
 	pass
 	
 func Flower_Heal():
-	pass
-	
+	$ezkiel.health = ($ezekiel.health + 20) % 100
+	#TODO : Play animation of healing

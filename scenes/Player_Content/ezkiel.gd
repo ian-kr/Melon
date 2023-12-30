@@ -2,8 +2,11 @@ extends CharacterBody2D
 
 @export var SPEED: float = 150.0
 
+const bulletPath = preload("res://fish_bullet.tscn")
+
 var input_direction : Vector2 = Vector2.ZERO
 var facing = "down"
+var health : int = 100
 
 func _ready():
 	$AnimationPlayer.play("walk_right")
@@ -13,6 +16,8 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
+	if(Input.is_action_just_pressed("ui_accept")):
+		shoot()
 	# Animation
 	if velocity != Vector2.ZERO:  # Check if the player is moving
 		if Input.is_action_just_pressed("up"):
@@ -31,4 +36,13 @@ func _physics_process(delta):
 		$AnimationPlayer.play("idle_"+facing)  # Replace "idle" with your actual idle animation name
 	
 	move_and_slide()
+
+func shoot():
+	var bullet = bulletPath.instantiate()
+	get_parent().add_child(bullet)
+	bullet.position = $Marker2D.global_position
+	
+	
+	
+	
 

@@ -9,5 +9,6 @@ var health : int = 500
 func _ready():
 	$Cow_Animation.play("Cow_Idle")
 
+
 func _physics_process(delta):
 	move_and_slide()

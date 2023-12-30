@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://bfekkk7kqve4c"]
 
-[ext_resource type="Script" path="res://scenes/Player_Content/character_body_2d.gd" id="1_71yju"]
+[ext_resource type="Script" path="res://scenes/Player_Content/ezkiel.gd" id="1_71yju"]
 [ext_resource type="Texture2D" uid="uid://bed4r65gtbv3y" path="res://graphics/AmishNewSpriteSheet.png" id="2_jvf8s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1pmyt"]
-radius = 11.0
+radius = 26.0
 
 [sub_resource type="Animation" id="Animation_c3rhk"]
 length = 0.001
@@ -200,11 +200,11 @@ _data = {
 script = ExtResource("1_71yju")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(556, 386)
+position = Vector2(575.5, 345)
 shape = SubResource("CircleShape2D_1pmyt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(557, 362)
+position = Vector2(577.5, 330)
 scale = Vector2(1.84375, 2.125)
 texture = ExtResource("2_jvf8s")
 hframes = 21
@@ -213,3 +213,6 @@ hframes = 21
 libraries = {
 "": SubResource("AnimationLibrary_sp58q")
 }
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(623.5, 337)
