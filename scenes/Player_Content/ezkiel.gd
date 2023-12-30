@@ -47,3 +47,7 @@ func shoot():
 
 func swing():
 	pass
+
+
+func _on_swing_area_area_entered(area):
+	pass # Replace with function body.
