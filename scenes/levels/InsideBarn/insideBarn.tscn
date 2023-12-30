@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cvp0lfnxsyhc8" path="res://talismans.tscn" id="9_vo8pb"]
 [ext_resource type="AudioStream" uid="uid://cigwewwqx6s6s" path="res://music/BattleMusic.mp3" id="10_6kqc1"]
 [ext_resource type="PackedScene" uid="uid://dd11oyrynv0dr" path="res://fish_bullet.tscn" id="11_qrjyx"]
-[ext_resource type="Texture2D" uid="uid://c27yyhi2b0acb" path="res://graphics/assets/things/barnWall.png" id="12_xphsc"]
+[ext_resource type="Texture2D" uid="uid://bfdixnyyqwgit" path="res://graphics/assets/things/barnWall.png" id="12_xphsc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
 texture = ExtResource("2_4t0nn")
@@ -23,7 +23,7 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_u1qj2")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_78wl1"]
-size = Vector2(28, 205)
+size = Vector2(32, 217)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_druqx"]
 size = Vector2(1801, 63.5)
@@ -85,7 +85,7 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("6_riyrt")
 
 [node name="ExitDoor" type="CollisionShape2D" parent="Door"]
-position = Vector2(23, 16)
+position = Vector2(57, 13.5)
 shape = SubResource("RectangleShape2D_78wl1")
 
 [node name="Collisions" type="StaticBody2D" parent="."]

@@ -29,15 +29,20 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_k3odi")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 985.0
+visible = false
+offset_left = 973.0
 offset_top = 20.0
-offset_right = 1118.0
+offset_right = 1106.0
 offset_bottom = 60.0
 theme = SubResource("Theme_aj1u8")
 theme_override_styles/panel = SubResource("StyleBoxFlat_u6ebs")
 
 [node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 22.0
 offset_top = 8.0
-offset_right = 60.0
+offset_right = 110.0
 offset_bottom = 31.0
 text = "Health: 660"
+horizontal_alignment = 1
+vertical_alignment = 1
