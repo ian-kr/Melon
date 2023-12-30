@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dwjh56qsf7a70"]
+[gd_scene load_steps=42 format=3 uid="uid://dwjh56qsf7a70"]
 
 [ext_resource type="Script" path="res://scenes/levels/Good Ending/goodEnding.gd" id="1_ks3jv"]
 [ext_resource type="Texture2D" uid="uid://c354jegu3dsrb" path="res://graphics/assets/things/darkWood.png" id="3_knsgo"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cjkwvfmggm5n1" path="res://graphics/assets/things/GoldCowEnd.png" id="14_eshft"]
 [ext_resource type="Texture2D" uid="uid://bvq347ftio64p" path="res://graphics/playerSprites/sprite_11.png" id="14_xtckq"]
 [ext_resource type="Texture2D" uid="uid://cr45r4yymbenr" path="res://graphics/assets/things/Golden Cow Walk.png" id="15_dtm44"]
+[ext_resource type="AudioStream" uid="uid://26ncmukh7gfd" path="res://music/VictoryFanfare.mp3" id="16_utox6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
 texture = ExtResource("4_dxmk8")
@@ -283,6 +284,9 @@ sprite_frames = SubResource("SpriteFrames_5xpdo")
 animation = &"walk"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boss"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_utox6")
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="Door" to="Door" method="_on_body_shape_exited"]

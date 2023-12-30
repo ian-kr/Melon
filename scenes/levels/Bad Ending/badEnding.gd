@@ -37,7 +37,7 @@ func _ready():
 			await pause()
 		else:
 			$Textbox.queue(line)
-	
+	$AudioStreamPlayer.play()
 	$Player/AnimationPlayer.play("ded")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dbvct84o2tykg"]
+[gd_scene load_steps=25 format=3 uid="uid://dbvct84o2tykg"]
 
 [ext_resource type="Script" path="res://scenes/levels/Coward Ending/coward_ending.gd" id="1_scdfr"]
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="2_ymak1"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cx1kekdnvon48" path="res://graphics/MormonSprite/MormomRight2.png" id="18_q5p5j"]
 [ext_resource type="Texture2D" uid="uid://ds6p1b3piw762" path="res://graphics/MormonSprite/MormomRight3.png" id="19_22vyy"]
 [ext_resource type="Texture2D" uid="uid://k3yr681kik8c" path="res://graphics/MormonSprite/MormomRight4.png" id="20_aq2sf"]
+[ext_resource type="AudioStream" uid="uid://cm2p6tsbqsitj" path="res://music/CowardEnd.mp3" id="22_hb5wn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jgskx"]
 animations = [{
@@ -147,3 +148,6 @@ animation = &"IdleRight"
 position = Vector2(-3000, 103)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("14_hjv6h")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_hb5wn")

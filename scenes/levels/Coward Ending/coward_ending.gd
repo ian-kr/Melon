@@ -39,6 +39,7 @@ func _ready():
 	moveSprite(other, Vector2(-3050,318),20)
 	plr.play("Walking Left")
 	other.play("Walk Left")
+	$AudioStreamPlayer.play()
 	await get_tree().create_timer(20.0).timeout
 	plr.play("Walking Forward")
 	plr.stop()
