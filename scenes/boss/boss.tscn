@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dot2svp28huva"]
+[gd_scene load_steps=13 format=3 uid="uid://dot2svp28huva"]
 
 [ext_resource type="Script" path="res://Boss.gd" id="1_avfjf"]
 [ext_resource type="Texture2D" uid="uid://c2qovvg5xdcc" path="res://graphics/assets/things/daCow.png" id="2_51yde"]
+[ext_resource type="Script" path="res://scenes/boss/hit.gd" id="3_o2m5g"]
 
 [sub_resource type="Animation" id="Animation_od0dn"]
 resource_name = "Cow_Idle"
@@ -114,6 +115,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cx3vw"]
 size = Vector2(347, 280)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fe8um"]
+radius = 132.034
+
 [node name="Boss" type="CharacterBody2D"]
 script = ExtResource("1_avfjf")
 
@@ -129,6 +133,15 @@ libraries = {
 "": SubResource("AnimationLibrary_ugr1l")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="hitbox" type="Area2D" parent="."]
+script = ExtResource("3_o2m5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(578, 259)
 shape = SubResource("RectangleShape2D_cx3vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(562, 256)
+shape = SubResource("CircleShape2D_fe8um")
+
+[connection signal="body_entered" from="hitbox" to="hitbox" method="_on_body_entered"]

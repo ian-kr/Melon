@@ -13,6 +13,11 @@ func _process(delta):
 	
 	if health <= 200:
 		golden = true
+		Talisman.phase = 2
+	if health <= 0:
+		Talisman.endingLocation = self.position
+		Talisman.cowLocation = get_node("/root/InsideBarn/Boss").position
+		get_tree().change_scene_to_file("res://scenes/levels/Good Ending/goodEnding.tscn")
 	if golden == true && goldenset == true:
 		$Cow_Animation.play("GoldenCow_Idle")
 		goldenset = false

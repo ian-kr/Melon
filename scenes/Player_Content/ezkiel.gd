@@ -7,7 +7,7 @@ const bulletPath = preload("res://fish_bullet.tscn")
 var input_direction : Vector2 = Vector2.ZERO
 var facing = "down"
 var health : int = 100
-
+var fish = 0
 func _ready():
 	$AnimationPlayer.play("walk_right")
 func get_input():
@@ -39,7 +39,9 @@ func _physics_process(delta):
 
 #TODO FIX THE GODDAMN FISH
 func shoot():
+	fish += 1
 	var bullet = bulletPath.instantiate()
+	bullet.name = "fish"+ str(fish)
 	get_parent().add_child(bullet)
 	bullet.position = $Marker2D.global_position
 
