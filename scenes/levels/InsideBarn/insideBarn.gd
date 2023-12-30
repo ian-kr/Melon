@@ -6,6 +6,7 @@ var has_sword : bool = false
 var has_flower : bool = true
 
 func _ready():
+	var controls = "Controls\n"
 	if len(Talisman.talismans) == 0:
 		$Talismans/Panel.hide()
 		var textFile = "res://scenes/TextScript/TextFiles/insideBarnIntro.txt"
@@ -25,15 +26,18 @@ func _ready():
 		for talisman in Talisman.talismans:
 			if talisman == "Gabriel":
 				has_flower = true
+				controls += "Heal: L"
 			if talisman == "Michael":
 				has_sword = true
+				controls += "Sword: J"
 			if talisman == "Raphael":
 				has_fish = true
-				
+				controls += "Fish: K"
+		$Talismans/Panel/Panel2/Label.text = controls			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if battle:
-		
+		$Talismans/Panel/Label.text = "Health: " + str($Player.health)
 		if Input.is_action_just_pressed("fish") and has_fish == true:
 			Fish_Attack()
 		if Input.is_action_just_pressed("swing") and has_sword == true:
