@@ -1,9 +1,5 @@
 extends Node2D
 
-var battle : bool = false
-var has_fish : bool = false
-var has_sword : bool = false
-var has_flower : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,36 +15,7 @@ func _ready():
 	else:
 		$Talismans.showTalismans()
 		$Textbox.queue("Now it's finally time to fight him!")
-		battle = true
-		for talisman in Talisman.talismans:
-			if talisman == "Gabriel":
-				has_flower = true
-			if talisman == "Michael":
-				has_sword = true
-			if talisman == "Raphael":
-				has_fish = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-	if battle:
-		if Input.is_action_just_pressed("fish") and has_fish == true:
-			Fish_Attack()
-		if Input.is_action_just_pressed("sword") and has_sword == true:
-			Sword_Attack()
-		if Input.is_action_just_pressed("flower") and has_flower == true:
-			Flower_Heal()
-		
-	
-
-func Fish_Attack():
 	pass
-	
-func Sword_Attack():
-	pass
-	
-func Flower_Heal():
-	pass
-	
-
-	
