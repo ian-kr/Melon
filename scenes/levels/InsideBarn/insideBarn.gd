@@ -29,7 +29,6 @@ func _ready():
 				
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	if battle:
 		if Input.is_action_just_pressed("fish") and has_fish == true:
 			Fish_Attack()

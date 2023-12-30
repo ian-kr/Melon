@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cur1o7lmal2b8"]
+
+[ext_resource type="PackedScene" uid="uid://bu6ke1fykx4n5" path="res://graphics/titlescreengraphic.tscn" id="1_uiaat"]
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="Titlescreen" parent="." instance=ExtResource("1_uiaat")]
