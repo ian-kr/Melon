@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cvp0lfnxsyhc8" path="res://talismans.tscn" id="9_vo8pb"]
 [ext_resource type="AudioStream" uid="uid://cigwewwqx6s6s" path="res://music/BattleMusic.mp3" id="10_6kqc1"]
 [ext_resource type="PackedScene" uid="uid://dd11oyrynv0dr" path="res://fish_bullet.tscn" id="11_qrjyx"]
-[ext_resource type="Texture2D" uid="uid://bfdixnyyqwgit" path="res://graphics/assets/things/barnWall.png" id="12_xphsc"]
+[ext_resource type="Texture2D" uid="uid://dg5k83kthqhaa" path="res://graphics/assets/things/barnWall.png" id="12_xphsc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1qj2"]
 texture = ExtResource("2_4t0nn")
@@ -126,12 +126,10 @@ scale = Vector2(0.242188, 2.17187)
 
 [node name="Wall1" type="Sprite2D" parent="Barn Walls"]
 position = Vector2(123.871, 1.3813)
-scale = Vector2(1, 1)
 texture = ExtResource("12_xphsc")
 
 [node name="Wall2" type="Sprite2D" parent="Barn Walls"]
 position = Vector2(156.903, -353.151)
-scale = Vector2(1, 1)
 texture = ExtResource("12_xphsc")
 
 [node name="Wall3" type="Sprite2D" parent="Barn Walls"]

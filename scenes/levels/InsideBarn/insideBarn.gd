@@ -32,9 +32,9 @@ func _process(delta):
 	if battle:
 		if Input.is_action_just_pressed("fish") and has_fish == true:
 			Fish_Attack()
-		if Input.is_action_just_pressed("sword") and has_sword == true:
+		if Input.is_action_just_pressed("swing") and has_sword == true:
 			Sword_Attack()
-		if Input.is_action_just_pressed("flower") and has_flower == true:
+		if Input.is_action_just_pressed("heal") and has_flower == true:
 			Flower_Heal()
 		
 	
