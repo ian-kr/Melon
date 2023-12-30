@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bns23pxa10n86"]
+[gd_scene load_steps=35 format=3 uid="uid://bns23pxa10n86"]
 
 [ext_resource type="Script" path="res://scenes/levels/town.gd" id="1_nnyt8"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="1_vuune"]
@@ -15,8 +15,15 @@
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="13_5o8hg"]
 [ext_resource type="Script" path="res://scenes/levels/talkToGrandma.gd" id="14_2dexs"]
 [ext_resource type="Texture2D" uid="uid://2advl77hb5vu" path="res://graphics/assets/things/fence.png" id="14_8umxh"]
-[ext_resource type="Texture2D" uid="uid://difgvs4lu720a" path="res://graphics/assets/things/hay.png" id="14_673j7"]
+[ext_resource type="Texture2D" uid="uid://bbp3nocoofl4u" path="res://graphics/GrandmaEster/sprite_12-1.png.png" id="15_5x8ob"]
+[ext_resource type="Texture2D" uid="uid://2ofqvohrpy8v" path="res://graphics/GrandmaEster/sprite_12-2.png.png" id="16_g6k6a"]
 [ext_resource type="Texture2D" uid="uid://4ef7h73rfl6w" path="res://graphics/assets/things/fenceEnd.png" id="16_i0j8d"]
+[ext_resource type="Texture2D" uid="uid://ci6tvovlte6kr" path="res://graphics/GrandmaEster/sprite_12-3.png.png" id="17_uuwlo"]
+[ext_resource type="Texture2D" uid="uid://bpfd2wmcludmd" path="res://graphics/GrandmaEster/sprite_12-4.png.png" id="18_ytjnt"]
+[ext_resource type="Texture2D" uid="uid://c015tpjhxy78j" path="res://graphics/GrandmaEster/Right1.png" id="19_pl1hf"]
+[ext_resource type="Texture2D" uid="uid://ygldi3jahmyw" path="res://graphics/GrandmaEster/Right2.png" id="20_rrjk0"]
+[ext_resource type="Texture2D" uid="uid://cn1hctsnaqy4m" path="res://graphics/GrandmaEster/Right3.png" id="21_j3hod"]
+[ext_resource type="Texture2D" uid="uid://bp45bu5qabeh2" path="res://graphics/GrandmaEster/Right4.png" id="22_8ltlb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
 size = Vector2(3654.88, 63.5)
@@ -44,6 +51,43 @@ radius = 85.9593
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pmjon"]
 radius = 35.0143
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wblqh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_5x8ob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g6k6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uuwlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ytjnt")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_pl1hf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rrjk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_j3hod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8ltlb")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
 
 [node name="Town" type="Node2D"]
 script = ExtResource("1_nnyt8")
@@ -296,16 +340,19 @@ scale = Vector2(3.83251, 2.61011)
 texture = ExtResource("6_o7l0b")
 
 [node name="GrandmaEster" type="Area2D" parent="."]
-position = Vector2(157, 430)
+position = Vector2(238, 430)
 script = ExtResource("14_2dexs")
 
-[node name="StandinForGrandmaEster" type="Sprite2D" parent="GrandmaEster"]
-position = Vector2(1, -7)
-texture = ExtResource("14_673j7")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrandmaEster"]
-position = Vector2(1, -7)
 shape = SubResource("CircleShape2D_pmjon")
+
+[node name="GrandmaEster2" type="AnimatedSprite2D" parent="GrandmaEster"]
+scale = Vector2(1.8, 1.8)
+sprite_frames = SubResource("SpriteFrames_wblqh")
+animation = &"right"
+
+[node name="Timer" type="Timer" parent="GrandmaEster"]
+wait_time = 7.0
 
 [node name="Fences" type="Node2D" parent="."]
 
@@ -372,3 +419,4 @@ flip_h = true
 [connection signal="body_shape_exited" from="Barn Area" to="Barn Area" method="_on_body_shape_exited"]
 [connection signal="body_entered" from="GrandmaEster" to="GrandmaEster" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="GrandmaEster" to="GrandmaEster" method="_on_body_shape_exited"]
+[connection signal="timeout" from="GrandmaEster/Timer" to="GrandmaEster" method="_on_timer_timeout"]
