@@ -10,5 +10,5 @@ To do:
 
 Fix Bugs:
 * Cow clipping
-* Moon walking
+* Moon walking ( never )
 * Grandma closing your game
