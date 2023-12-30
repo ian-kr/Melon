@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bfekkk7kqve4c"]
+[gd_scene load_steps=17 format=3 uid="uid://bfekkk7kqve4c"]
 
 [ext_resource type="Script" path="res://scenes/Player_Content/ezkiel.gd" id="1_71yju"]
 [ext_resource type="Texture2D" uid="uid://bed4r65gtbv3y" path="res://graphics/AmishNewSpriteSheet.png" id="2_jvf8s"]
@@ -166,7 +166,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_tl2qm"]
 resource_name = "walk_up"
-length = 0.35
+length = 0.55
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -175,10 +175,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(-0.2, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [5, 6, 4, 7]
+"values": [5, 4, 7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sp58q"]
@@ -196,8 +196,12 @@ _data = {
 "walk_up": SubResource("Animation_tl2qm")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0gpqa"]
+radius = 28.3196
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_71yju")
+SPEED = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(575.5, 345)
@@ -216,3 +220,11 @@ libraries = {
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(623.5, 337)
+
+[node name="SwingArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwingArea"]
+position = Vector2(614, 344)
+shape = SubResource("CircleShape2D_0gpqa")
+
+[connection signal="area_entered" from="SwingArea" to="." method="_on_swing_area_area_entered"]
