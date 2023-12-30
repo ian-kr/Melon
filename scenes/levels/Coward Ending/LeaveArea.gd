@@ -8,7 +8,7 @@ var entered = false
 func _process(delta):
 	if(entered == true):
 		if(Input.is_action_just_pressed("ui_accept")):
-			get_tree().change_scene_to_file("res://scenes/levels/coward_ending.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/Coward Ending/coward_ending.tscn")
 
 
 func _on_body_entered(body):

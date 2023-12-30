@@ -1,6 +1,6 @@
-[gd_scene load_steps=37 format=3 uid="uid://celmyaj67vt2n"]
+[gd_scene load_steps=42 format=3 uid="uid://celmyaj67vt2n"]
 
-[ext_resource type="Script" path="res://scenes/levels/townP2.gd" id="1_8n4jy"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/townP2.gd" id="1_8n4jy"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="2_y8nsx"]
 [ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="3_j2gl1"]
 [ext_resource type="Texture2D" uid="uid://dho8yq5ojw7x8" path="res://graphics/assets/things/wheat.png" id="4_5e60d"]
@@ -9,11 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://drhfhscsiecai" path="res://graphics/assets/things/Tree2.png" id="7_mescu"]
 [ext_resource type="Texture2D" uid="uid://d1n0ypadehs2d" path="res://graphics/assets/things/Tree3.png" id="8_ca0xy"]
 [ext_resource type="Texture2D" uid="uid://dt4p2wspgs78e" path="res://graphics/assets/things/House1.png" id="9_k35s5"]
-[ext_resource type="Script" path="res://scenes/levels/LeaveArea.gd" id="10_lu6fj"]
-[ext_resource type="Script" path="res://scenes/levels/Barn Area.gd" id="11_tr4q6"]
+[ext_resource type="Script" path="res://scenes/levels/Coward Ending/LeaveArea.gd" id="10_lu6fj"]
+[ext_resource type="Script" path="res://scenes/levels/InsideBarn/Barn Area.gd" id="11_tr4q6"]
 [ext_resource type="Texture2D" uid="uid://wyewc62g6l3i" path="res://graphics/assets/things/Barn.png" id="12_blypu"]
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="13_q671g"]
-[ext_resource type="Script" path="res://scenes/levels/GrandmaEster2.gd" id="14_1pwk4"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/GrandmaEster2.gd" id="14_1pwk4"]
 [ext_resource type="Texture2D" uid="uid://bbp3nocoofl4u" path="res://graphics/GrandmaEster/sprite_12-1.png.png" id="15_48uen"]
 [ext_resource type="Texture2D" uid="uid://2ofqvohrpy8v" path="res://graphics/GrandmaEster/sprite_12-2.png.png" id="16_ayl5h"]
 [ext_resource type="Texture2D" uid="uid://ci6tvovlte6kr" path="res://graphics/GrandmaEster/sprite_12-3.png.png" id="17_psw3f"]
@@ -24,8 +24,12 @@
 [ext_resource type="Texture2D" uid="uid://bp45bu5qabeh2" path="res://graphics/GrandmaEster/Right4.png" id="22_81nqm"]
 [ext_resource type="Texture2D" uid="uid://2advl77hb5vu" path="res://graphics/assets/things/fence.png" id="23_snywk"]
 [ext_resource type="Texture2D" uid="uid://4ef7h73rfl6w" path="res://graphics/assets/things/fenceEnd.png" id="24_o0dwy"]
-[ext_resource type="Script" path="res://scenes/levels/WheatField.gd" id="24_t1k5b"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/WheatField.gd" id="24_t1k5b"]
 [ext_resource type="Texture2D" uid="uid://bu8oy8so7wvdx" path="res://graphics/assets/charms/CharmGabriel.png" id="26_ept22"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/MichaelTalisman.gd" id="27_7qecy"]
+[ext_resource type="Texture2D" uid="uid://djkscc6lbooj6" path="res://graphics/assets/charms/BrokeCharmMichael-1.png.png" id="28_cirlw"]
+[ext_resource type="Texture2D" uid="uid://c630xwynhn34a" path="res://graphics/assets/charms/BrokeCharmMichael-2.png.png" id="29_e3tjf"]
+[ext_resource type="Texture2D" uid="uid://bpy3lhh6ajxa2" path="res://graphics/assets/charms/BrokeCharmMichael-3.png.png" id="30_4nwnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
 size = Vector2(3654.88, 63.5)
@@ -90,6 +94,9 @@ animations = [{
 "name": &"right",
 "speed": 5.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tsbkx"]
+radius = 16.0
 
 [node name="TownP2" type="Node2D"]
 script = ExtResource("1_8n4jy")
@@ -372,6 +379,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("24_o0dwy")
 
 [node name="Fence2" type="Sprite2D" parent="Fences"]
+z_index = 1
 texture_repeat = 2
 position = Vector2(2276, 347)
 rotation = -1.15541
@@ -430,6 +438,43 @@ texture = ExtResource("26_ept22")
 
 [node name="Timer" type="Timer" parent="WheatField"]
 
+[node name="MichaelPiece1" type="Area2D" parent="."]
+script = ExtResource("27_7qecy")
+
+[node name="BrokeCharmMichael-1_png" type="Sprite2D" parent="MichaelPiece1"]
+position = Vector2(770, 95)
+texture = ExtResource("28_cirlw")
+
+[node name="Collision1" type="CollisionPolygon2D" parent="MichaelPiece1"]
+polygon = PackedVector2Array(764, 84, 769, 97, 772, 94, 777, 92, 782, 90, 782, 86, 776, 81, 769, 81)
+
+[node name="MichaelPiece2" type="Area2D" parent="."]
+script = ExtResource("27_7qecy")
+
+[node name="BrokeCharmMichael-2_png" type="Sprite2D" parent="MichaelPiece2"]
+position = Vector2(256, 271)
+texture = ExtResource("29_e3tjf")
+
+[node name="Collision2" type="CollisionPolygon2D" parent="MichaelPiece2"]
+polygon = PackedVector2Array(249, 262, 242, 270, 246, 278, 252, 284, 257, 284, 256, 272)
+
+[node name="MichaelPiece3" type="Area2D" parent="."]
+script = ExtResource("27_7qecy")
+
+[node name="BrokeCharmMichael-3_png" type="Sprite2D" parent="MichaelPiece3"]
+position = Vector2(380, 1140)
+texture = ExtResource("30_4nwnq")
+
+[node name="Collision3" type="CollisionPolygon2D" parent="MichaelPiece3"]
+polygon = PackedVector2Array(381, 1136, 391, 1135, 392, 1145, 382, 1152, 377, 1145)
+
+[node name="treasureMap" type="Area2D" parent="."]
+position = Vector2(357, 412)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="treasureMap"]
+position = Vector2(3, -18)
+shape = SubResource("CircleShape2D_tsbkx")
+
 [connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="LeaveArea" to="LeaveArea" method="_on_body_shape_exited"]
 [connection signal="body_entered" from="Barn Area" to="Barn Area" method="_on_body_entered"]
@@ -440,3 +485,6 @@ texture = ExtResource("26_ept22")
 [connection signal="body_entered" from="WheatField" to="WheatField" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="WheatField" to="WheatField" method="_on_body_shape_exited"]
 [connection signal="timeout" from="WheatField/Timer" to="WheatField" method="_on_timer_timeout"]
+[connection signal="body_entered" from="MichaelPiece1" to="MichaelPiece1" method="_on_body_entered"]
+[connection signal="body_entered" from="MichaelPiece2" to="MichaelPiece2" method="_on_body_entered"]
+[connection signal="body_entered" from="MichaelPiece3" to="MichaelPiece3" method="_on_body_entered"]

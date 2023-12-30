@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="melon"
-run/main_scene="res://scenes/levels/town.tscn"
+run/main_scene="res://scenes/levels/Intro/town.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
 [autoload]
 
-Talisman="*res://talisman.gd"
+Talisman="*res://Global Data/talisman.gd"
 
 [display]
 

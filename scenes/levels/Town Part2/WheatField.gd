@@ -38,7 +38,7 @@ func _process(delta):
 
 
 func startHunt():
-	get_node("/root/TownP2/TextBox").queue("Now where is that Talisman...")
+	get_node("/root/TownP2/TextBox").queue("Now where is that charm...")
 	get_node("/root/TownP2/TextBox").queue("pause")
 	await pause()
 	inside = true
