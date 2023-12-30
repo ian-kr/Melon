@@ -222,8 +222,9 @@ position = Vector2(623.5, 337)
 
 [node name="SwingArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SwingArea"]
+[node name="SwordSwingShape" type="CollisionShape2D" parent="SwingArea"]
 position = Vector2(614, 344)
 shape = SubResource("CircleShape2D_0gpqa")
+disabled = true
 
 [connection signal="area_entered" from="SwingArea" to="." method="_on_swing_area_area_entered"]
