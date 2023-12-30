@@ -1,18 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvp0lfnxsyhc8"]
+[gd_scene load_steps=7 format=3 uid="uid://cvp0lfnxsyhc8"]
 
 [ext_resource type="Texture2D" uid="uid://bu8oy8so7wvdx" path="res://graphics/assets/charms/CharmGabriel.png" id="1_6pypp"]
 [ext_resource type="Script" path="res://UItalismans.gd" id="1_truo7"]
 [ext_resource type="Texture2D" uid="uid://h0lc727llesk" path="res://graphics/assets/charms/CharmMichael.png" id="2_snk1c"]
 [ext_resource type="Texture2D" uid="uid://dfyk33eotyve8" path="res://graphics/assets/charms/CharmRaphael.png" id="3_k3odi"]
 
+[sub_resource type="Theme" id="Theme_aj1u8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6ebs"]
+bg_color = Color(0.12549, 0.12549, 0.12549, 0.392157)
+
 [node name="Talismans" type="CanvasLayer"]
 script = ExtResource("1_truo7")
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="CharmGabriel" type="Sprite2D" parent="."]
 position = Vector2(49, 39)
@@ -28,3 +27,17 @@ texture = ExtResource("2_snk1c")
 position = Vector2(206, 37)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_k3odi")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 985.0
+offset_top = 20.0
+offset_right = 1118.0
+offset_bottom = 60.0
+theme = SubResource("Theme_aj1u8")
+theme_override_styles/panel = SubResource("StyleBoxFlat_u6ebs")
+
+[node name="Label" type="Label" parent="Panel"]
+offset_top = 8.0
+offset_right = 60.0
+offset_bottom = 31.0
+text = "Health: 660"
