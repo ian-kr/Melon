@@ -6,6 +6,7 @@ func _ready():
 	pass # Replace with function body.
 	if (Talisman.talismans.find("Michael") != -1):
 		self.hide()
+		get_node("/root/TownP2/CharmMichael").hide()
 	else:
 		self.show()
 		get_node("/root/TownP2/CharmMichael").hide()
