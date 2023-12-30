@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bfekkk7kqve4c"]
+[gd_scene load_steps=16 format=3 uid="uid://bfekkk7kqve4c"]
 
 [ext_resource type="Script" path="res://scenes/Player_Content/character_body_2d.gd" id="1_71yju"]
-[ext_resource type="Texture2D" uid="uid://w5r14n3b5q1d" path="res://graphics/amishSpriteSheet.png" id="2_51d23"]
+[ext_resource type="Texture2D" uid="uid://bed4r65gtbv3y" path="res://graphics/AmishNewSpriteSheet.png" id="2_jvf8s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1pmyt"]
 radius = 11.0
@@ -17,8 +17,23 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_hqy6j"]
+resource_name = "ded"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [20]
 }
 
 [sub_resource type="Animation" id="Animation_kvi86"]
@@ -33,7 +48,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [2]
 }
 
@@ -48,7 +63,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [19]
 }
 
@@ -63,7 +78,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(-0.1),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [18]
 }
 
@@ -79,7 +94,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [4]
 }
 
@@ -94,7 +109,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(),
 "transitions": PackedFloat32Array(),
-"update": 1,
+"update": 0,
 "values": []
 }
 
@@ -111,7 +126,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [3, 1, 2, 3]
 }
 
@@ -128,7 +143,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [12, 13, 14, 15]
 }
 
@@ -145,7 +160,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [8, 9, 10, 11]
 }
 
@@ -162,13 +177,14 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [5, 6, 4, 7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sp58q"]
 _data = {
 "RESET": SubResource("Animation_c3rhk"),
+"ded": SubResource("Animation_hqy6j"),
 "idle_down": SubResource("Animation_kvi86"),
 "idle_left": SubResource("Animation_exxct"),
 "idle_right": SubResource("Animation_187hy"),
@@ -190,8 +206,8 @@ shape = SubResource("CircleShape2D_1pmyt")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(557, 362)
 scale = Vector2(1.84375, 2.125)
-texture = ExtResource("2_51d23")
-hframes = 20
+texture = ExtResource("2_jvf8s")
+hframes = 21
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

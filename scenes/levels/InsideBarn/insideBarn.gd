@@ -5,9 +5,6 @@ var has_fish : bool = false
 var has_sword : bool = false
 var has_flower : bool = false
 
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	if len(Talisman.talismans) == 0:
 		var textFile = "res://scenes/TextScript/TextFiles/insideBarnIntro.txt"
@@ -29,7 +26,7 @@ func _ready():
 				has_sword = true
 			if talisman == "Raphael":
 				has_fish = true
-
+				
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
@@ -51,6 +48,4 @@ func Sword_Attack():
 	
 func Flower_Heal():
 	pass
-	
-
 	
