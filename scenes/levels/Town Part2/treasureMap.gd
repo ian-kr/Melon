@@ -16,7 +16,7 @@ func _on_body_entered(body):
 		$TreasureMap.show()
 		get_node("/root/TownP2/TextBox").queue("This is a map. Maybe I should follow it.")
 		get_node("/root/TownP2/TextBox").queue("pause")
-		pause()
+		await pause()
 		$TreasureMap.hide()
 		get_node("/root/TownP2/pond").mapfound = true
 

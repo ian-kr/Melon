@@ -25,8 +25,8 @@ func _process(delta):
 				if (Talisman.talismans.find("Gabriel") == -1):
 					Talisman.talismans.append("Gabriel")
 				while (timer.time_left != 0):
-					$CharmGabriel.position = Vector2(get_node("/root/TownP2/Camera2D").position) + Vector2(-5,-50)
-					await get_tree().create_timer(0.1).timeout
+					$CharmGabriel.position = Vector2(get_node("/root/TownP2/Camera2D").position) + Vector2(-13,-50)
+					await get_tree().create_timer(0.01).timeout
 				$CharmGabriel.hide()
 				claiming = false
 			else:

@@ -5,6 +5,7 @@
 [node name="TreasureMap" type="CanvasLayer"]
 
 [node name="Map" type="Sprite2D" parent="."]
-position = Vector2(590, 337)
-scale = Vector2(3, 3)
+z_index = -1
+position = Vector2(588, 257)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_oj1xa")

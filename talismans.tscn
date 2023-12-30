@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvp0lfnxsyhc8"]
 
 [ext_resource type="Texture2D" uid="uid://bu8oy8so7wvdx" path="res://graphics/assets/charms/CharmGabriel.png" id="1_6pypp"]
-[ext_resource type="Script" path="res://talismans.gd" id="1_truo7"]
+[ext_resource type="Script" path="res://UItalismans.gd" id="1_truo7"]
 [ext_resource type="Texture2D" uid="uid://h0lc727llesk" path="res://graphics/assets/charms/CharmMichael.png" id="2_snk1c"]
 [ext_resource type="Texture2D" uid="uid://dfyk33eotyve8" path="res://graphics/assets/charms/CharmRaphael.png" id="3_k3odi"]
 

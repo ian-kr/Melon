@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://celmyaj67vt2n"]
+[gd_scene load_steps=52 format=3 uid="uid://celmyaj67vt2n"]
 
 [ext_resource type="Script" path="res://scenes/levels/Town Part2/townP2.gd" id="1_8n4jy"]
 [ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="2_y8nsx"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://d1eojgofc7xcm" path="res://graphics/assets/things/Map.png" id="33_bjy0i"]
 [ext_resource type="Texture2D" uid="uid://cy51lwh4mjs31" path="res://graphics/assets/things/pond/Pond-2.png.png" id="33_g1uri"]
 [ext_resource type="Texture2D" uid="uid://dfyk33eotyve8" path="res://graphics/assets/charms/CharmRaphael.png" id="34_6myou"]
+[ext_resource type="Texture2D" uid="uid://h0lc727llesk" path="res://graphics/assets/charms/CharmMichael.png" id="38_uy78f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
 size = Vector2(3654.88, 63.5)
@@ -132,7 +133,7 @@ autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("3_j2gl1")]
 z_index = 10
-position = Vector2(2611, 184)
+position = Vector2(1154, 727)
 scale = Vector2(0.979897, 0.859365)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
@@ -140,7 +141,7 @@ position = Vector2(570, 337)
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3169.54, 473.606)
+position = Vector2(1712.54, 1016.61)
 scale = Vector2(0.979897, 0.859365)
 
 [node name="bg" type="ParallaxBackground" parent="."]
@@ -354,7 +355,7 @@ script = ExtResource("10_lu6fj")
 shape = SubResource("CircleShape2D_2qxbk")
 
 [node name="Barn Area" type="Area2D" parent="."]
-position = Vector2(1222, 322)
+position = Vector2(-113, 907)
 script = ExtResource("11_tr4q6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barn Area"]
@@ -473,6 +474,7 @@ texture = ExtResource("28_cirlw")
 polygon = PackedVector2Array(764, 84, 769, 97, 772, 94, 777, 92, 782, 90, 782, 86, 776, 81, 769, 81)
 
 [node name="MichaelPiece2" type="Area2D" parent="."]
+position = Vector2(1936, -91)
 script = ExtResource("27_7qecy")
 
 [node name="BrokeCharmMichael-2_png" type="Sprite2D" parent="MichaelPiece2"]
@@ -493,7 +495,7 @@ texture = ExtResource("30_4nwnq")
 polygon = PackedVector2Array(381, 1136, 391, 1135, 392, 1145, 382, 1152, 377, 1145)
 
 [node name="treasureMap" type="Area2D" parent="."]
-position = Vector2(357, 412)
+position = Vector2(342, 409)
 script = ExtResource("31_ho77s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treasureMap"]
@@ -509,22 +511,27 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("33_bjy0i")
 
 [node name="pond" type="Area2D" parent="."]
-position = Vector2(1025, 1146)
 script = ExtResource("31_nbvsg")
 
 [node name="pondCollide" type="CollisionShape2D" parent="pond"]
-position = Vector2(220, 18)
+position = Vector2(1293, 1172)
 shape = SubResource("CircleShape2D_kb404")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pond"]
-position = Vector2(138, -49)
+position = Vector2(1211, 1105)
 sprite_frames = SubResource("SpriteFrames_xaehk")
 frame_progress = 0.566025
 
 [node name="CharmRaphael" type="Sprite2D" parent="pond"]
-position = Vector2(321, -63)
+z_index = 5
+position = Vector2(1394, 1089)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("34_6myou")
+
+[node name="CharmMichael" type="Sprite2D" parent="."]
+position = Vector2(573, 158)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("38_uy78f")
 
 [connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
 [connection signal="body_shape_exited" from="LeaveArea" to="LeaveArea" method="_on_body_shape_exited"]
