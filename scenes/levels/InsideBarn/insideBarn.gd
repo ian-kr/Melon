@@ -7,6 +7,7 @@ var has_flower : bool = true
 
 func _ready():
 	if len(Talisman.talismans) == 0:
+		$Talismans/Panel.hide()
 		var textFile = "res://scenes/TextScript/TextFiles/insideBarnIntro.txt"
 		var currentFile = FileAccess.open(textFile,FileAccess.READ)
 		#Play the scene
@@ -16,6 +17,7 @@ func _ready():
 		for line in text:
 			$Textbox.queue(line)
 	else:
+		$Talismans/Panel.show()
 		$Talismans.showTalismans()
 		$Textbox.queue("Now it's finally time to fight him!")
 		battle = true
@@ -30,6 +32,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if battle:
+		
 		if Input.is_action_just_pressed("fish") and has_fish == true:
 			Fish_Attack()
 		if Input.is_action_just_pressed("swing") and has_sword == true:

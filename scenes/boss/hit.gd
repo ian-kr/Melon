@@ -15,5 +15,5 @@ func _on_body_entered(body):
 	if body.name.substr(0,4)== "fish":
 		body.queue_free()
 		get_node("/root/InsideBarn/Boss").health -= 5
-		print (get_node("/root/InsideBarn/Boss").health)
+		
 		
