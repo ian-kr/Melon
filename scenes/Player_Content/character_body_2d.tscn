@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bfekkk7kqve4c"]
+[gd_scene load_steps=19 format=3 uid="uid://bfekkk7kqve4c"]
 
 [ext_resource type="Script" path="res://scenes/Player_Content/ezkiel.gd" id="1_71yju"]
 [ext_resource type="Texture2D" uid="uid://bed4r65gtbv3y" path="res://graphics/AmishNewSpriteSheet.png" id="2_jvf8s"]
+[ext_resource type="Script" path="res://scenes/Player_Content/hitbox.gd" id="3_5at1f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1pmyt"]
 radius = 26.0
@@ -199,6 +200,9 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_0gpqa"]
 radius = 28.3196
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbtil"]
+size = Vector2(8.37918, 17.1767)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_71yju")
 
@@ -227,4 +231,13 @@ position = Vector2(614, 344)
 shape = SubResource("CircleShape2D_0gpqa")
 disabled = true
 
+[node name="hitbox" type="Area2D" parent="."]
+script = ExtResource("3_5at1f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(576, 327.797)
+scale = Vector2(3.45821, -3.81877)
+shape = SubResource("RectangleShape2D_pbtil")
+
 [connection signal="area_entered" from="SwingArea" to="." method="_on_swing_area_area_entered"]
+[connection signal="body_entered" from="hitbox" to="hitbox" method="_on_body_entered"]

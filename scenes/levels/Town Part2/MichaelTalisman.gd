@@ -32,7 +32,6 @@ func _on_body_entered(body):
 				Talisman.michaelPieces = 0
 				get_node("/root/TownP2/CharmMichael").show()
 				var timer = get_tree().create_timer(3.0)
-				Talisman.talismans.append("Raphael")
 				
 				while (timer.time_left != 0):
 					get_node("/root/TownP2/CharmMichael").position = Vector2(get_node("/root/TownP2/Camera2D").position) + Vector2(-13,-50)

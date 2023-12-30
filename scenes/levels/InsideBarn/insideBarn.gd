@@ -26,13 +26,13 @@ func _ready():
 		for talisman in Talisman.talismans:
 			if talisman == "Gabriel":
 				has_flower = true
-				controls += "Heal: L"
+				controls += "Heal: L\n"
 			if talisman == "Michael":
 				has_sword = true
-				controls += "Sword: J"
+				controls += "Sword: J\n"
 			if talisman == "Raphael":
 				has_fish = true
-				controls += "Fish: K"
+				controls += "Fish: K\n"
 		$Talismans/Panel/Panel2/Label.text = controls			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -48,13 +48,13 @@ func _process(delta):
 	
 
 func Fish_Attack():
-	$ezkiel.shoot()
+	$Player.shoot()
 	
 func Sword_Attack():
-	get_node("Player/SwingArea/SwordSwingShape").Disable = false
+	get_node("Player/SwingArea/SwordSwingShape").set_deferred("disabled", false)
 	await get_tree().create_timer(1.0).timeout
-	get_node("Player/SwingArea/SwordSwingShape").Disable = true
+	get_node("Player/SwingArea/SwordSwingShape").set_deferred("disabled", true)
 	
 func Flower_Heal():
-	$ezkiel.health = ($ezekiel.health + 20) % 100
+	$Player.health = ($Player.health + 20) % 100
 	#TODO : Play animation of healing
