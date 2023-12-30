@@ -111,8 +111,8 @@ _data = {
 "cow_walking": SubResource("Animation_1b3au")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ctou7"]
-radius = 203.337
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cx3vw"]
+size = Vector2(347, 280)
 
 [node name="Boss" type="CharacterBody2D"]
 script = ExtResource("1_avfjf")
@@ -130,5 +130,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(576, 252)
-shape = SubResource("CircleShape2D_ctou7")
+position = Vector2(578, 259)
+shape = SubResource("RectangleShape2D_cx3vw")

@@ -37,12 +37,11 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+#TODO FIX THE GODDAMN FISH
 func shoot():
 	var bullet = bulletPath.instantiate()
 	get_parent().add_child(bullet)
 	bullet.position = $Marker2D.global_position
-	
-	
-	
-	
 
+func swing():
+	pass
