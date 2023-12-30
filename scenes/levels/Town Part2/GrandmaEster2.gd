@@ -47,7 +47,7 @@ func _on_body_entered(body):
 	entered = true # Replace with function body.
 
 func pause():
-	while(get_node("/root/Town/TextBox").textqueue.is_empty() != true):
+	while(get_node("/root/TownP2/TextBox").textqueue.is_empty() != true):
 		await get_tree().create_timer(0.5).timeout
 	
 

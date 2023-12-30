@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://dbvct84o2tykg"]
 
-[ext_resource type="Script" path="res://scenes/levels/coward_ending.gd" id="1_scdfr"]
+[ext_resource type="Script" path="res://scenes/levels/Coward Ending/coward_ending.gd" id="1_scdfr"]
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="2_ymak1"]
 [ext_resource type="Texture2D" uid="uid://dseihpify4nac" path="res://graphics/assets/things/grassTile.png" id="3_yjnhm"]
 [ext_resource type="Texture2D" uid="uid://d03vgecdpnjk1" path="res://graphics/playerSprites/sprite_00.png" id="4_kka0a"]

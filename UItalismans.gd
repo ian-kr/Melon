@@ -6,6 +6,7 @@ func _ready():
 	$CharmGabriel.hide()
 	$CharmMichael.hide()
 	$CharmRaphael.hide()
+	pass # Replace with function body.
 
 func showTalismans():
 	for talisman in Talisman.talismans:

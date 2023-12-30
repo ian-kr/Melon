@@ -7,3 +7,8 @@ To do:
 * Make game map
 * Draw final boss
 * Code boss fight
+
+Fix Bugs:
+* Cow clipping
+* Moon walking
+* Grandma closing your game
