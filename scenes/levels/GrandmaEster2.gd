@@ -1,7 +1,7 @@
 extends Area2D
 
 var entered : bool = false
-var textFile = "res://scenes/TextScript/TextFiles/GrandmaEsther1.txt"
+var textFile = "res://scenes/TextScript/TextFiles/GrandmaEsther2.txt"
 var currentFile = FileAccess.open(textFile,FileAccess.READ)
 var convo = false
 # Called when the node enters the scene tree for the first time.
@@ -28,7 +28,7 @@ func _process(delta):
 				text = text.split("\n")
 				text.remove_at(text.size()-1)
 				for line in text:
-					get_node("/root/Town/TextBox").queue(line)
+					get_node("/root/TownP2/TextBox").queue(line)
 				pause()
 
 
