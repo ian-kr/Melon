@@ -18,13 +18,13 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("up"):
 			$AnimationPlayer.play("walk_up")
 			facing = "up"
-		elif Input.is_action_just_pressed("down"):
+		if Input.is_action_just_pressed("down"):
 			$AnimationPlayer.play("walk_down")
 			facing = "down"
-		elif Input.is_action_just_pressed("right"):
+		if Input.is_action_just_pressed("right"):
 			$AnimationPlayer.play("walk_right")
 			facing = "right"
-		elif Input.is_action_just_pressed("left"):
+		if Input.is_action_just_pressed("left"):
 			$AnimationPlayer.play("walk_left")
 			facing = "left"
 	else:  # Player is not moving, play idle animation
