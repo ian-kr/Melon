@@ -50,6 +50,7 @@ func swing():
 
 
 func _on_swing_area_area_entered(area):
-	area.name == "hitbox"
-	get_node("/root/InsideBarn/Boss").health -= 30
-	print (get_node("/root/InsideBarn/Boss").health)
+	if Talisman.battle == true:
+		area.name == "hitbox"
+		get_node("/root/InsideBarn/Boss").health -= 30
+		print (get_node("/root/InsideBarn/Boss").health)

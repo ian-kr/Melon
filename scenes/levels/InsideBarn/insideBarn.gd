@@ -21,6 +21,7 @@ func _ready():
 		$Talismans.showTalismans()
 		$Textbox.queue("Now it's finally time to fight him!")
 		battle = true
+		Talisman.battle = true
 		for talisman in Talisman.talismans:
 			if talisman == "Gabriel":
 				has_flower = true
