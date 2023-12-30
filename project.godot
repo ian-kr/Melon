@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="melon"
-run/main_scene="res://scenes/levels/Intro/town.tscn"
+run/main_scene="res://scenes/levels/titleScreen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
 [autoload]
