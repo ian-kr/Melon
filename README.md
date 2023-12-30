@@ -12,4 +12,3 @@ Fix Bugs:
 * Cow clipping
 * Moon walking
 * Grandma closing your game
-* Pond error
