@@ -284,7 +284,7 @@ position = Vector2(3642, 653.75)
 shape = SubResource("RectangleShape2D_cp0nr")
 
 [node name="Wheat_farmBorder" type="CollisionPolygon2D" parent="collision"]
-polygon = PackedVector2Array(1745, 212, 2284, 290, 2240, 387, 1696, 297, 1690, 340, 2242, 431, 2329, 261, 1756, 162)
+polygon = PackedVector2Array(1745, 212, 2284, 290, 2240, 387, 1704, 300, 1690, 340, 2242, 431, 2329, 261, 1756, 162)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1, -1)
