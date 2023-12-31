@@ -1,0 +1,523 @@
+[gd_scene load_steps=47 format=3 uid="uid://celmyaj67vt2n"]
+
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/townP2.gd" id="1_8n4jy"]
+[ext_resource type="AudioStream" uid="uid://c6ik1cfj7c278" path="res://music/MainThemeV1.mp3" id="2_y8nsx"]
+[ext_resource type="PackedScene" uid="uid://bfekkk7kqve4c" path="res://scenes/Player_Content/character_body_2d.tscn" id="3_j2gl1"]
+[ext_resource type="Texture2D" uid="uid://dho8yq5ojw7x8" path="res://graphics/assets/things/wheat.png" id="4_5e60d"]
+[ext_resource type="Texture2D" uid="uid://dseihpify4nac" path="res://graphics/assets/things/grassTile.png" id="5_4js1c"]
+[ext_resource type="Texture2D" uid="uid://3wvncfplcq52" path="res://graphics/assets/things/Tree1.png" id="6_3p2nu"]
+[ext_resource type="Texture2D" uid="uid://drhfhscsiecai" path="res://graphics/assets/things/Tree2.png" id="7_mescu"]
+[ext_resource type="Texture2D" uid="uid://d1n0ypadehs2d" path="res://graphics/assets/things/Tree3.png" id="8_ca0xy"]
+[ext_resource type="Texture2D" uid="uid://dt4p2wspgs78e" path="res://graphics/assets/things/House1.png" id="9_k35s5"]
+[ext_resource type="Script" path="res://scenes/levels/Coward Ending/LeaveArea.gd" id="10_lu6fj"]
+[ext_resource type="Script" path="res://scenes/levels/InsideBarn/Barn Area.gd" id="11_tr4q6"]
+[ext_resource type="Texture2D" uid="uid://wyewc62g6l3i" path="res://graphics/assets/things/Barn.png" id="12_blypu"]
+[ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="13_q671g"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/GrandmaEster2.gd" id="14_1pwk4"]
+[ext_resource type="Texture2D" uid="uid://bbp3nocoofl4u" path="res://graphics/GrandmaEster/sprite_12-1.png.png" id="15_48uen"]
+[ext_resource type="Texture2D" uid="uid://2ofqvohrpy8v" path="res://graphics/GrandmaEster/sprite_12-2.png.png" id="16_ayl5h"]
+[ext_resource type="Texture2D" uid="uid://ci6tvovlte6kr" path="res://graphics/GrandmaEster/sprite_12-3.png.png" id="17_psw3f"]
+[ext_resource type="Texture2D" uid="uid://bpfd2wmcludmd" path="res://graphics/GrandmaEster/sprite_12-4.png.png" id="18_p8uri"]
+[ext_resource type="Texture2D" uid="uid://c015tpjhxy78j" path="res://graphics/GrandmaEster/Right1.png" id="19_o1vja"]
+[ext_resource type="Texture2D" uid="uid://ygldi3jahmyw" path="res://graphics/GrandmaEster/Right2.png" id="20_wrlda"]
+[ext_resource type="Texture2D" uid="uid://cn1hctsnaqy4m" path="res://graphics/GrandmaEster/Right3.png" id="21_x4wlg"]
+[ext_resource type="Texture2D" uid="uid://bp45bu5qabeh2" path="res://graphics/GrandmaEster/Right4.png" id="22_81nqm"]
+[ext_resource type="Texture2D" uid="uid://2advl77hb5vu" path="res://graphics/assets/things/fence.png" id="23_snywk"]
+[ext_resource type="Texture2D" uid="uid://4ef7h73rfl6w" path="res://graphics/assets/things/fenceEnd.png" id="24_o0dwy"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/WheatField.gd" id="24_t1k5b"]
+[ext_resource type="Texture2D" uid="uid://bu8oy8so7wvdx" path="res://graphics/assets/charms/CharmGabriel.png" id="26_ept22"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/MichaelTalisman.gd" id="27_7qecy"]
+[ext_resource type="Texture2D" uid="uid://djkscc6lbooj6" path="res://graphics/assets/charms/BrokeCharmMichael-1.png.png" id="28_cirlw"]
+[ext_resource type="Texture2D" uid="uid://c630xwynhn34a" path="res://graphics/assets/charms/BrokeCharmMichael-2.png.png" id="29_e3tjf"]
+[ext_resource type="Texture2D" uid="uid://bpy3lhh6ajxa2" path="res://graphics/assets/charms/BrokeCharmMichael-3.png.png" id="30_4nwnq"]
+[ext_resource type="Script" path="res://scenes/levels/Town Part2/pond.gd" id="31_nbvsg"]
+[ext_resource type="Texture2D" uid="uid://2k8dwqxhpcdd" path="res://graphics/assets/things/pond/Pond-1.png.png" id="32_d2av5"]
+[ext_resource type="Texture2D" uid="uid://cy51lwh4mjs31" path="res://graphics/assets/things/pond/Pond-2.png.png" id="33_g1uri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsw73"]
+size = Vector2(3654.88, 63.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyxb2"]
+size = Vector2(17, 1301)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgdpw"]
+size = Vector2(3427, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp0nr"]
+size = Vector2(22, 1374.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aidf5"]
+size = Vector2(143, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3f2g"]
+size = Vector2(149, 140)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2qxbk"]
+radius = 120.801
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i8lus"]
+radius = 85.9593
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pmjon"]
+radius = 35.0143
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wblqh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_48uen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ayl5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_psw3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_p8uri")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_o1vja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wrlda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_x4wlg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_81nqm")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tsbkx"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kb404"]
+radius = 39.0512
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xaehk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_d2av5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_g1uri")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="TownP2" type="Node2D"]
+script = ExtResource("1_8n4jy")
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_y8nsx")
+volume_db = -31.856
+autoplay = true
+
+[node name="Player" parent="." instance=ExtResource("3_j2gl1")]
+z_index = 10
+position = Vector2(2611, 184)
+scale = Vector2(0.979897, 0.859365)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+position = Vector2(570, 337)
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3169.54, 473.606)
+scale = Vector2(0.979897, 0.859365)
+
+[node name="bg" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="bg"]
+motion_mirroring = Vector2(1150, 650)
+
+[node name="GrassTile" type="Sprite2D" parent="bg/ParallaxLayer"]
+texture_repeat = 2
+position = Vector2(575, 325)
+texture = ExtResource("5_4js1c")
+region_enabled = true
+region_rect = Rect2(0, 0, 1150, 650)
+metadata/_edit_lock_ = true
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="Tree1" type="Sprite2D" parent="Trees"]
+position = Vector2(46, -24)
+scale = Vector2(2.6875, 2.86719)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree1" type="Sprite2D" parent="Trees/Tree1"]
+position = Vector2(867.721, -9.41689)
+scale = Vector2(1.57631, 1.24286)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree2" type="Sprite2D" parent="Trees"]
+position = Vector2(122, -23)
+scale = Vector2(2.25, 2.65234)
+texture = ExtResource("7_mescu")
+
+[node name="Tree17" type="Sprite2D" parent="Trees"]
+position = Vector2(1089, -7)
+scale = Vector2(2.70028, 2.42388)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree18" type="Sprite2D" parent="Trees"]
+position = Vector2(1406, -16)
+scale = Vector2(3.53565, 2.12695)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree3" type="Sprite2D" parent="Trees"]
+position = Vector2(202, -31)
+scale = Vector2(3.3125, 3.48437)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree15" type="Sprite2D" parent="Trees"]
+position = Vector2(1623, -12)
+scale = Vector2(3.5138, 2.54916)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree16" type="Sprite2D" parent="Trees"]
+position = Vector2(1521, -39)
+scale = Vector2(4.10376, 3.47363)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree4" type="Sprite2D" parent="Trees"]
+position = Vector2(424, -61)
+scale = Vector2(4.3125, 4.375)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree5" type="Sprite2D" parent="Trees"]
+position = Vector2(512, -33)
+scale = Vector2(2.66406, 3.16016)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree6" type="Sprite2D" parent="Trees"]
+position = Vector2(291, -35)
+scale = Vector2(3.10938, 3.42969)
+texture = ExtResource("7_mescu")
+
+[node name="Tree7" type="Sprite2D" parent="Trees"]
+position = Vector2(715.25, -46)
+scale = Vector2(3.60937, 3.70313)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree26" type="Sprite2D" parent="Trees"]
+position = Vector2(2533, -56)
+scale = Vector2(5.42237, 4.57861)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree8" type="Sprite2D" parent="Trees"]
+position = Vector2(815, -24)
+scale = Vector2(3.53125, 3.53125)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree24" type="Sprite2D" parent="Trees"]
+position = Vector2(-16522, -1031)
+scale = Vector2(14.4914, 12.2663)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree23" type="Sprite2D" parent="Trees"]
+position = Vector2(2694, -51)
+scale = Vector2(2.79303, 4.00965)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree25" type="Sprite2D" parent="Trees"]
+position = Vector2(2820, -163)
+scale = Vector2(5.7893, 6.27203)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree9" type="Sprite2D" parent="Trees"]
+position = Vector2(982, -35)
+scale = Vector2(3.46875, 3.70313)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree13" type="Sprite2D" parent="Trees"]
+position = Vector2(2034, -37)
+scale = Vector2(4.9375, 3.25)
+texture = ExtResource("7_mescu")
+
+[node name="Tree10" type="Sprite2D" parent="Trees"]
+position = Vector2(612, -63)
+scale = Vector2(5, 5)
+texture = ExtResource("7_mescu")
+
+[node name="Tree12" type="Sprite2D" parent="Trees"]
+position = Vector2(1304, -17)
+scale = Vector2(2.04687, 2.25781)
+texture = ExtResource("6_3p2nu")
+
+[node name="Tree14" type="Sprite2D" parent="Trees"]
+position = Vector2(2240, -42.0002)
+scale = Vector2(6.04688, 3.97656)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree21" type="Sprite2D" parent="Trees"]
+position = Vector2(2996, -78)
+scale = Vector2(7.5708, 6.37322)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree20" type="Sprite2D" parent="Trees"]
+position = Vector2(1875, -37.9999)
+scale = Vector2(6.43555, 4.13371)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree22" type="Sprite2D" parent="Trees"]
+position = Vector2(2134, -72)
+scale = Vector2(4.46875, 4.29126)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree22" type="Sprite2D" parent="Trees/Tree22"]
+position = Vector2(246.378, -7.69005)
+scale = Vector2(2.11549, 1.23899)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree19" type="Sprite2D" parent="Trees"]
+position = Vector2(1729, -19)
+scale = Vector2(4.62499, 3.66064)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree11" type="Sprite2D" parent="Trees"]
+position = Vector2(895, -34)
+scale = Vector2(2.75, 3.59375)
+texture = ExtResource("8_ca0xy")
+
+[node name="Tree27" type="Sprite2D" parent="Trees"]
+position = Vector2(1192, -40)
+scale = Vector2(3.83251, 2.61011)
+texture = ExtResource("6_3p2nu")
+
+[node name="collision" type="StaticBody2D" parent="."]
+
+[node name="Treeline" type="CollisionShape2D" parent="collision"]
+position = Vector2(1806.56, 16)
+shape = SubResource("RectangleShape2D_xsw73")
+
+[node name="West_Border" type="CollisionShape2D" parent="collision"]
+position = Vector2(3.5, 659.5)
+shape = SubResource("RectangleShape2D_eyxb2")
+
+[node name="South_Border" type="CollisionShape2D" parent="collision"]
+position = Vector2(1932.5, 1297)
+shape = SubResource("RectangleShape2D_dgdpw")
+
+[node name="Easy_Border" type="CollisionShape2D" parent="collision"]
+position = Vector2(3642, 653.75)
+shape = SubResource("RectangleShape2D_cp0nr")
+
+[node name="Wheat_farmBorder" type="CollisionPolygon2D" parent="collision"]
+polygon = PackedVector2Array(1745, 212, 2284, 290, 2240, 387, 1705, 298, 1690, 340, 2242, 431, 2329, 261, 1756, 162)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1, -1)
+
+[node name="House1" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(374, 277)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_k35s5")
+
+[node name="House2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(134, 286)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_k35s5")
+flip_h = true
+
+[node name="House3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(138, 293)
+shape = SubResource("RectangleShape2D_aidf5")
+
+[node name="House4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(369, 286)
+shape = SubResource("RectangleShape2D_m3f2g")
+
+[node name="LeaveArea" type="Area2D" parent="."]
+position = Vector2(1, 1294)
+script = ExtResource("10_lu6fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeaveArea"]
+shape = SubResource("CircleShape2D_2qxbk")
+
+[node name="Barn Area" type="Area2D" parent="."]
+position = Vector2(1222, 322)
+script = ExtResource("11_tr4q6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barn Area"]
+position = Vector2(2056, 160)
+shape = SubResource("CircleShape2D_i8lus")
+
+[node name="Barn" type="Sprite2D" parent="Barn Area"]
+position = Vector2(2102, 98)
+scale = Vector2(0.761719, 0.765625)
+texture = ExtResource("12_blypu")
+
+[node name="TextBox" parent="." instance=ExtResource("13_q671g")]
+
+[node name="GrandmaEster" type="Area2D" parent="."]
+position = Vector2(238, 430)
+script = ExtResource("14_1pwk4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrandmaEster"]
+shape = SubResource("CircleShape2D_pmjon")
+
+[node name="GrandmaEster2" type="AnimatedSprite2D" parent="GrandmaEster"]
+scale = Vector2(1.8, 1.8)
+sprite_frames = SubResource("SpriteFrames_wblqh")
+animation = &"right"
+
+[node name="Timer" type="Timer" parent="GrandmaEster"]
+wait_time = 7.0
+
+[node name="Fences" type="Node2D" parent="."]
+
+[node name="Fence" type="Sprite2D" parent="Fences"]
+z_index = 3
+texture_repeat = 2
+position = Vector2(1983, 366)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("23_snywk")
+region_enabled = true
+region_rect = Rect2(0, 0, 2048, 256)
+
+[node name="FenceEnd" type="Sprite2D" parent="Fences"]
+z_index = 3
+position = Vector2(2243, 407)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("24_o0dwy")
+
+[node name="Fence2" type="Sprite2D" parent="Fences"]
+z_index = 1
+texture_repeat = 2
+position = Vector2(2276, 347)
+rotation = -1.15541
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("23_snywk")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 256)
+
+[node name="Fence3" type="Sprite2D" parent="Fences"]
+z_index = 3
+texture_repeat = 2
+position = Vector2(2037, 231)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("23_snywk")
+region_enabled = true
+region_rect = Rect2(0, 0, 2048, 256)
+
+[node name="FenceEnd2" type="Sprite2D" parent="Fences"]
+position = Vector2(2305, 274)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("24_o0dwy")
+
+[node name="FenceEnd3" type="Sprite2D" parent="Fences"]
+z_index = 3
+position = Vector2(1700, 321)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("24_o0dwy")
+flip_h = true
+
+[node name="FenceEnd4" type="Sprite2D" parent="Fences"]
+position = Vector2(1759, 186)
+rotation = 0.15708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("24_o0dwy")
+flip_h = true
+
+[node name="WheatField" type="Area2D" parent="."]
+script = ExtResource("24_t1k5b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WheatField"]
+position = Vector2(-3, 3)
+polygon = PackedVector2Array(1767, 208, 2289, 288, 2228, 423, 1727, 308)
+
+[node name="Wheat" type="Sprite2D" parent="WheatField"]
+position = Vector2(1999, 342)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_5e60d")
+
+[node name="CharmGabriel" type="Sprite2D" parent="WheatField"]
+position = Vector2(2006, 159)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("26_ept22")
+
+[node name="Timer" type="Timer" parent="WheatField"]
+
+[node name="MichaelPiece1" type="Area2D" parent="."]
+script = ExtResource("27_7qecy")
+
+[node name="BrokeCharmMichael-1_png" type="Sprite2D" parent="MichaelPiece1"]
+position = Vector2(770, 95)
+texture = ExtResource("28_cirlw")
+
+[node name="Collision1" type="CollisionPolygon2D" parent="MichaelPiece1"]
+polygon = PackedVector2Array(764, 84, 769, 97, 772, 94, 777, 92, 782, 90, 782, 86, 776, 81, 769, 81)
+
+[node name="MichaelPiece2" type="Area2D" parent="."]
+script = ExtResource("27_7qecy")
+
+[node name="BrokeCharmMichael-2_png" type="Sprite2D" parent="MichaelPiece2"]
+position = Vector2(256, 271)
+texture = ExtResource("29_e3tjf")
+
+[node name="Collision2" type="CollisionPolygon2D" parent="MichaelPiece2"]
+polygon = PackedVector2Array(249, 262, 242, 270, 246, 278, 252, 284, 257, 284, 256, 272)
+
+[node name="MichaelPiece3" type="Area2D" parent="."]
+script = ExtResource("27_7qecy")
+
+[node name="BrokeCharmMichael-3_png" type="Sprite2D" parent="MichaelPiece3"]
+position = Vector2(380, 1140)
+texture = ExtResource("30_4nwnq")
+
+[node name="Collision3" type="CollisionPolygon2D" parent="MichaelPiece3"]
+polygon = PackedVector2Array(381, 1136, 391, 1135, 392, 1145, 382, 1152, 377, 1145)
+
+[node name="treasureMap" type="Area2D" parent="."]
+position = Vector2(357, 412)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="treasureMap"]
+position = Vector2(3, -18)
+shape = SubResource("CircleShape2D_tsbkx")
+
+[node name="pond" type="Area2D" parent="."]
+position = Vector2(1025, 1146)
+script = ExtResource("31_nbvsg")
+
+[node name="pondCollide" type="CollisionShape2D" parent="pond"]
+position = Vector2(220, 18)
+shape = SubResource("CircleShape2D_kb404")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pond"]
+position = Vector2(138, -49)
+sprite_frames = SubResource("SpriteFrames_xaehk")
+frame_progress = 0.505533
+
+[connection signal="body_entered" from="LeaveArea" to="LeaveArea" method="_on_body_entered"]
+[connection signal="body_shape_exited" from="LeaveArea" to="LeaveArea" method="_on_body_shape_exited"]
+[connection signal="body_entered" from="Barn Area" to="Barn Area" method="_on_body_entered"]
+[connection signal="body_shape_exited" from="Barn Area" to="Barn Area" method="_on_body_shape_exited"]
+[connection signal="body_entered" from="GrandmaEster" to="GrandmaEster" method="_on_body_entered"]
+[connection signal="body_shape_exited" from="GrandmaEster" to="GrandmaEster" method="_on_body_shape_exited"]
+[connection signal="timeout" from="GrandmaEster/Timer" to="GrandmaEster" method="_on_timer_timeout"]
+[connection signal="body_entered" from="WheatField" to="WheatField" method="_on_body_entered"]
+[connection signal="body_shape_exited" from="WheatField" to="WheatField" method="_on_body_shape_exited"]
+[connection signal="timeout" from="WheatField/Timer" to="WheatField" method="_on_timer_timeout"]
+[connection signal="body_entered" from="MichaelPiece1" to="MichaelPiece1" method="_on_body_entered"]
+[connection signal="body_entered" from="MichaelPiece2" to="MichaelPiece2" method="_on_body_entered"]
+[connection signal="body_entered" from="MichaelPiece3" to="MichaelPiece3" method="_on_body_entered"]

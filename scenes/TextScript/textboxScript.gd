@@ -5,7 +5,7 @@ extends CanvasLayer
 @onready var startTag = $TextPanel/Start
 @onready var endTag = $TextPanel/End
 @onready var textBox = $TextPanel/Text
-@onready var tween = create_tween()
+@onready var tween
 
 #Set up variables
 const readRate = 0.1
@@ -20,14 +20,14 @@ enum state {
 var currentState = state.READY
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$"End Panel".hide()
+	$"EndPanel".hide()
 	hideTextbox() #Hides the box at the start of game
 
 func queue(text): #Queues up the next piece of text
 	textqueue.push_back(text)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	match currentState: #Checks current state
 		state.READY:
 			#Ready state
@@ -63,11 +63,10 @@ func addText():
 		return
 	if (text == "end"):
 		#play ending screen
-		$"End Panel".show()
+		$"EndPanel".show()
 		tween = create_tween()
-		tween.tween_property($"End Panel","modulate",Color(1,1,1,1),5)
-		tween = create_tween()
-		tween.tween_property($"End Panel"/Label,"modulate",Color(1,1,1,1),5)
+		tween.tween_property($"EndPanel","modulate",Color(1,1,1,1),5)
+		tween.tween_property($"EndPanel"/Label,"modulate",Color(1,1,1,1),5)
 		
 		return
 	textBox.visible_ratio = 0.0

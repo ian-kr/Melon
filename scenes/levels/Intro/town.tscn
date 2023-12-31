@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://drhfhscsiecai" path="res://graphics/assets/things/Tree2.png" id="7_mgkwl"]
 [ext_resource type="Texture2D" uid="uid://d1n0ypadehs2d" path="res://graphics/assets/things/Tree3.png" id="8_p8f42"]
 [ext_resource type="Texture2D" uid="uid://dt4p2wspgs78e" path="res://graphics/assets/things/House1.png" id="9_o6io6"]
-[ext_resource type="Script" path="res://scenes/levels/Coward Ending/LeaveArea.gd" id="10_eswwj"]
+[ext_resource type="Script" path="res://scenes/levels/CowardEnding/LeaveArea.gd" id="10_eswwj"]
 [ext_resource type="Script" path="res://scenes/levels/InsideBarn/Barn Area.gd" id="10_g07nf"]
 [ext_resource type="PackedScene" uid="uid://oeeu0tx5jfoh" path="res://scenes/TextScript/text_box.tscn" id="13_5o8hg"]
 [ext_resource type="Script" path="res://scenes/levels/Intro/talkToGrandma.gd" id="14_2dexs"]

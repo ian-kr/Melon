@@ -10,7 +10,7 @@ func _ready():
 var moving = false
 var direction = 1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if (moving == false):
 		if (direction == 1):
 			moving = true
@@ -43,7 +43,7 @@ func goBack():
 	tween.tween_property(self,"position",Vector2(238,430),7)
 	$Timer.start()
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	entered = true # Replace with function body.
 
 func pause():
@@ -51,7 +51,7 @@ func pause():
 		await get_tree().create_timer(0.5).timeout
 	
 
-func _on_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+func _on_body_shape_exited(_body_rid, _body, _body_shape_index, _local_shape_index):
 	convo = false
 	entered = false  # Replace with function body.
 

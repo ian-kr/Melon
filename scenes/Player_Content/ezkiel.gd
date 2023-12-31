@@ -14,7 +14,9 @@ func get_input():
 	input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * SPEED
 
-func _physics_process(delta):
+func _physics_process(_delta):
+	if health <= 0:
+		get_tree().change_scene_to_file("res://scenes/levels/BadEnding/badEnding.tscn")
 	get_input()
 	if(Input.is_action_just_pressed("fish")):
 		shoot()
@@ -51,6 +53,6 @@ func swing():
 
 func _on_swing_area_area_entered(area):
 	if Talisman.battle == true:
-		area.name == "hitbox"
+		area.name = "hitbox"
 		get_node("/root/InsideBarn/Boss").health -= 30
 		print (get_node("/root/InsideBarn/Boss").health)

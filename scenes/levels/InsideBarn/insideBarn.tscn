@@ -117,34 +117,33 @@ shape = SubResource("RectangleShape2D_d8wiw")
 [node name="Talismans" parent="." instance=ExtResource("9_vo8pb")]
 
 [node name="Fish_Bullet" parent="." instance=ExtResource("11_qrjyx")]
-visible = false
 position = Vector2(308, -64)
 script = null
 
-[node name="Barn Walls" type="Node2D" parent="."]
+[node name="BarnWalls" type="Node2D" parent="."]
 position = Vector2(-41, 682)
 scale = Vector2(0.242188, 2.17187)
 
-[node name="Wall1" type="Sprite2D" parent="Barn Walls"]
+[node name="Wall1" type="Sprite2D" parent="BarnWalls"]
 position = Vector2(123.871, 1.3813)
 texture = ExtResource("12_xphsc")
 
-[node name="Wall2" type="Sprite2D" parent="Barn Walls"]
+[node name="Wall2" type="Sprite2D" parent="BarnWalls"]
 position = Vector2(156.903, -353.151)
 texture = ExtResource("12_xphsc")
 
-[node name="Wall3" type="Sprite2D" parent="Barn Walls"]
+[node name="Wall3" type="Sprite2D" parent="BarnWalls"]
 position = Vector2(3802.84, -494.043)
 rotation = 4.71239
 scale = Vector2(0.113845, 29.5531)
 texture = ExtResource("12_xphsc")
 
-[node name="Wall3" type="Sprite2D" parent="Barn Walls/Wall3"]
+[node name="Wall3" type="Sprite2D" parent="BarnWalls/Wall3"]
 position = Vector2(-5341.32, -2.27028)
 scale = Vector2(1.07753, 0.998639)
 texture = ExtResource("12_xphsc")
 
-[node name="Wall4" type="Sprite2D" parent="Barn Walls"]
+[node name="Wall4" type="Sprite2D" parent="BarnWalls"]
 position = Vector2(7509.78, -181.676)
 rotation = -3.14159
 scale = Vector2(0.899412, 2.49384)

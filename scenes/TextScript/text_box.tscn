@@ -74,7 +74,7 @@ text = "V"
 process_callback = 0
 one_shot = true
 
-[node name="End Panel" type="Panel" parent="."]
+[node name="EndPanel" type="Panel" parent="."]
 modulate = Color(1, 1, 1, 0)
 offset_left = 147.0
 offset_top = 51.0
@@ -82,7 +82,7 @@ offset_right = 990.0
 offset_bottom = 242.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_cta8t")
 
-[node name="Label" type="Label" parent="End Panel"]
+[node name="Label" type="Label" parent="EndPanel"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 842.0
